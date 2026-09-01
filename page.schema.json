@@ -1,0 +1,191 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "WeChat Mini Program page.json",
+  "description": "微信小程序页面配置。依据官方文档：https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/page.html",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "navigationBarBackgroundColor": {
+      "type": "string",
+      "description": "导航栏背景颜色。"
+    },
+    "navigationBarTextStyle": {
+      "type": "string",
+      "enum": ["black", "white"],
+      "description": "导航栏标题、状态栏颜色，仅支持 black / white。"
+    },
+    "navigationBarTitleText": {
+      "type": "string",
+      "description": "导航栏标题文字内容。"
+    },
+    "navigationStyle": {
+      "type": "string",
+      "enum": ["default", "custom"],
+      "description": "导航栏样式，仅支持 default / custom。iOS/Android 客户端 7.0.0 以下版本仅在 app.json 中生效。",
+      "x-wechat-client-min-version": "iOS/Android 7.0.0",
+      "x-wechat-min-version": "3.6.1 (Windows/Mac)"
+    },
+    "homeButton": {
+      "type": "boolean",
+      "description": "在非首页、非页面栈最底层页面或非 tabBar 内页面中的导航栏展示 home 键。",
+      "x-wechat-client-min-version": "8.0.24"
+    },
+    "backgroundColor": {
+      "type": "string",
+      "description": "窗口背景色。"
+    },
+    "backgroundColorContent": {
+      "type": "string",
+      "description": "页面容器背景色。"
+    },
+    "backgroundTextStyle": {
+      "type": "string",
+      "enum": ["dark", "light"],
+      "description": "下拉 loading 的样式，仅支持 dark / light。"
+    },
+    "backgroundColorTop": {
+      "type": "string",
+      "description": "顶部窗口背景色，仅 iOS 支持。",
+      "x-wechat-client-min-version": "6.5.16"
+    },
+    "backgroundColorBottom": {
+      "type": "string",
+      "description": "底部窗口背景色，仅 iOS 支持。",
+      "x-wechat-client-min-version": "6.5.16"
+    },
+    "enablePullDownRefresh": {
+      "type": "boolean",
+      "description": "是否开启当前页面下拉刷新。"
+    },
+    "onReachBottomDistance": {
+      "type": "number",
+      "description": "页面上拉触底事件触发时距页面底部距离，单位 px。"
+    },
+    "pageOrientation": {
+      "type": "string",
+      "enum": ["auto", "portrait", "landscape"],
+      "description": "屏幕旋转设置，支持 auto / portrait / landscape。",
+      "x-wechat-min-version": "2.4.0 (auto) / 2.5.0 (landscape)"
+    },
+    "disableScroll": {
+      "type": "boolean",
+      "description": "设置为 true 则页面整体不能上下滚动。只在页面配置中有效。"
+    },
+    "usingComponents": {
+      "type": "object",
+      "description": "页面自定义组件配置。",
+      "x-wechat-min-version": "1.6.3",
+      "propertyNames": {
+        "type": "string"
+      },
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "initialRenderingCache": {
+      "type": "string",
+      "enum": ["static", "dynamic", "capture"],
+      "description": "页面初始渲染缓存配置。",
+      "x-wechat-min-version": "2.11.1"
+    },
+    "style": {
+      "type": "string",
+      "enum": ["default", "v2"],
+      "description": "启用新版的组件样式。",
+      "x-wechat-min-version": "2.10.2"
+    },
+    "singlePage": {
+      "type": "object",
+      "description": "单页模式相关配置。",
+      "x-wechat-min-version": "2.12.0",
+      "additionalProperties": false,
+      "properties": {
+        "navigationBarFit": {
+          "type": "string",
+          "enum": ["float", "squeezed"],
+          "description": "导航栏与页面的相交状态。"
+        }
+      }
+    },
+    "restartStrategy": {
+      "type": "string",
+      "enum": ["homePage", "homePageAndLatestPage"],
+      "description": "重新启动策略配置。",
+      "x-wechat-min-version": "2.8.0"
+    },
+    "handleWebviewPreload": {
+      "type": "string",
+      "enum": ["static", "manual", "auto"],
+      "description": "控制预加载下个页面的时机。",
+      "x-wechat-min-version": "2.15.0"
+    },
+    "visualEffectInBackground": {
+      "type": "string",
+      "enum": ["hidden", "none"],
+      "description": "切入系统后台时，隐藏页面内容以保护用户隐私。",
+      "x-wechat-min-version": "2.15.0"
+    },
+    "enablePassiveEvent": {
+      "description": "事件监听是否为 passive。",
+      "x-wechat-min-version": "2.24.1",
+      "oneOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "touchstart": {
+              "type": "boolean"
+            },
+            "touchmove": {
+              "type": "boolean"
+            },
+            "wheel": {
+              "type": "boolean"
+            }
+          }
+        }
+      ]
+    },
+    "renderer": {
+      "type": "string",
+      "enum": ["webview", "skyline"],
+      "description": "渲染后端。",
+      "x-wechat-min-version": "2.30.4"
+    },
+    "rendererOptions": {
+      "type": "object",
+      "description": "渲染后端选项。",
+      "x-wechat-min-version": "3.1.0",
+      "additionalProperties": false,
+      "properties": {
+        "skyline": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "defaultDisplayBlock": {
+              "type": "boolean"
+            },
+            "defaultContentBox": {
+              "type": "boolean"
+            },
+            "disableABTest": {
+              "type": "boolean"
+            },
+            "tagNameStyleIsolation": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "componentFramework": {
+      "type": "string",
+      "enum": ["exparser", "glass-easel"],
+      "description": "组件框架。",
+      "x-wechat-min-version": "2.30.4"
+    }
+  }
+}
