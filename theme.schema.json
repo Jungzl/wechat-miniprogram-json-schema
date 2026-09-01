@@ -11,25 +11,26 @@
   "properties": {
     "light": {
       "$ref": "#/definitions/themeVariables",
-      "description": "浅色模式下的变量定义。"
+      "description": "浅色模式下的变量定义"
     },
     "dark": {
       "$ref": "#/definitions/themeVariables",
-      "description": "深色模式下的变量定义。"
+      "description": "深色模式下的变量定义"
     }
   },
   "definitions": {
     "themeVariables": {
       "type": "object",
-      "description": "以 key: value 形式定义变量名和值。变量可在 app.json 或 page.json 中以 @变量名 方式引用。",
+      "description": "以 key: value 形式定义变量名和值。变量可在 app.json 或 page.json 中以 @变量名 方式引用",
       "propertyNames": {
         "type": "string",
         "minLength": 1
       },
       "additionalProperties": {
         "type": "string",
-        "description": "变量值。文档示例包含颜色值、black/white 以及图标路径。"
+        "description": "变量值。文档示例包含颜色值、black/white 以及图标路径"
       }
     }
   }
 }
+

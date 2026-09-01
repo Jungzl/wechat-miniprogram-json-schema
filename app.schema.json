@@ -8,11 +8,11 @@
   "properties": {
     "entryPagePath": {
       "type": "string",
-      "description": "小程序默认启动路径（首页）。"
+      "description": "小程序默认启动路径（首页）"
     },
     "pages": {
       "type": "array",
-      "description": "页面路径列表。未指定 entryPagePath 时，第一项为首页。",
+      "description": "页面路径列表。未指定 entryPagePath 时，第一项为首页",
       "minItems": 1,
       "items": {
         "type": "string"
@@ -20,12 +20,12 @@
     },
     "window": {
       "type": "object",
-      "description": "全局默认窗口表现。",
+      "description": "全局默认窗口表现",
       "additionalProperties": false,
       "properties": {
         "navigationBarBackgroundColor": {
           "type": "string",
-          "description": "导航栏背景颜色。"
+          "description": "导航栏背景颜色"
         },
         "navigationBarTextStyle": {
           "oneOf": [
@@ -38,28 +38,28 @@
               "pattern": "^@"
             }
           ],
-          "description": "导航栏标题颜色，仅支持 black / white。"
+          "description": "导航栏标题颜色，仅支持 black / white"
         },
         "navigationBarTitleText": {
           "type": "string",
-          "description": "导航栏标题文字内容。"
+          "description": "导航栏标题文字内容"
         },
         "navigationStyle": {
           "type": "string",
           "enum": ["default", "custom"],
-          "description": "导航栏样式。"
+          "description": "导航栏样式"
         },
         "backgroundColor": {
           "type": "string",
-          "description": "窗口背景色。"
+          "description": "窗口背景色"
         },
         "backgroundColorTop": {
           "type": "string",
-          "description": "顶部窗口背景色，仅 iOS 支持。"
+          "description": "顶部窗口背景色，仅 iOS 支持"
         },
         "backgroundColorBottom": {
           "type": "string",
-          "description": "底部窗口背景色，仅 iOS 支持。"
+          "description": "底部窗口背景色，仅 iOS 支持"
         },
         "backgroundTextStyle": {
           "oneOf": [
@@ -72,64 +72,64 @@
               "pattern": "^@"
             }
           ],
-          "description": "下拉 loading 样式，仅支持 dark / light。"
+          "description": "下拉 loading 样式，仅支持 dark / light"
         },
         "enablePullDownRefresh": {
           "type": "boolean",
-          "description": "是否开启下拉刷新。"
+          "description": "是否开启下拉刷新"
         },
         "onReachBottomDistance": {
           "type": "number",
-          "description": "页面上拉触底事件触发时距页面底部距离，单位 px。"
+          "description": "页面上拉触底事件触发时距页面底部距离，单位 px"
         },
         "pageOrientation": {
           "type": "string",
           "enum": ["portrait", "landscape", "auto"],
-          "description": "屏幕旋转设置。"
+          "description": "屏幕旋转设置"
         },
         "restartStrategy": {
           "type": "string",
           "enum": ["homePage", "homePageAndLatestPage"],
-          "description": "冷启动时页面恢复策略。"
+          "description": "冷启动时页面恢复策略"
         },
         "initialRenderingCache": {
           "type": "string",
           "enum": ["static", "dynamic", "capture"],
-          "description": "页面初始渲染缓存配置。"
+          "description": "页面初始渲染缓存配置"
         },
         "handleWebviewPreload": {
           "type": "string",
           "enum": ["static", "manual", "auto"],
-          "description": "WebView 预加载控制。"
+          "description": "WebView 预加载控制"
         },
         "visualEffectInBackground": {
           "type": "string",
           "enum": ["none", "hidden"],
-          "description": "小程序切后台后界面视觉表现。"
+          "description": "小程序切后台后界面视觉表现"
         },
         "homeButton": {
           "type": "boolean",
-          "description": "是否在左上角显示 home 按钮。"
+          "description": "是否在左上角显示 home 按钮"
         }
       }
     },
     "tabBar": {
       "type": "object",
-      "description": "底部 tab 栏配置。",
+      "description": "底部 tab 栏配置",
       "additionalProperties": false,
       "required": ["list"],
       "properties": {
         "color": {
           "type": "string",
-          "description": "tab 上文字默认颜色。"
+          "description": "tab 上文字默认颜色"
         },
         "selectedColor": {
           "type": "string",
-          "description": "tab 上文字选中时颜色。"
+          "description": "tab 上文字选中时颜色"
         },
         "backgroundColor": {
           "type": "string",
-          "description": "tab 背景色。"
+          "description": "tab 背景色"
         },
         "borderStyle": {
           "oneOf": [
@@ -142,20 +142,20 @@
               "pattern": "^@"
             }
           ],
-          "description": "tabBar 上边框颜色。"
+          "description": "tabBar 上边框颜色"
         },
         "position": {
           "type": "string",
           "enum": ["bottom", "top"],
-          "description": "tabBar 位置。"
+          "description": "tabBar 位置"
         },
         "custom": {
           "type": "boolean",
-          "description": "是否自定义 tabBar。"
+          "description": "是否自定义 tabBar"
         },
         "list": {
           "type": "array",
-          "description": "tab 项列表，最少 2 项，最多 5 项。",
+          "description": "tab 项列表，最少 2 项，最多 5 项",
           "minItems": 2,
           "maxItems": 5,
           "items": {
@@ -165,19 +165,19 @@
             "properties": {
               "pagePath": {
                 "type": "string",
-                "description": "页面路径，必须在 pages 中先定义。"
+                "description": "页面路径，必须在 pages 中先定义"
               },
               "text": {
                 "type": "string",
-                "description": "tab 文字。"
+                "description": "tab 文字"
               },
               "iconPath": {
                 "type": "string",
-                "description": "未选中图标路径；position 为 top 时不显示。"
+                "description": "未选中图标路径；position 为 top 时不显示"
               },
               "selectedIconPath": {
                 "type": "string",
-                "description": "选中图标路径；position 为 top 时不显示。"
+                "description": "选中图标路径；position 为 top 时不显示"
               }
             }
           }
@@ -186,7 +186,7 @@
     },
     "networkTimeout": {
       "type": "object",
-      "description": "各类网络请求超时时间，单位 ms。",
+      "description": "各类网络请求超时时间，单位 ms",
       "additionalProperties": false,
       "properties": {
         "request": {
@@ -213,27 +213,27 @@
     },
     "debug": {
       "type": "boolean",
-      "description": "是否开启 debug 模式。"
+      "description": "是否开启 debug 模式"
     },
     "functionalPages": {
       "type": "boolean",
-      "description": "是否启用插件功能页。",
+      "description": "是否启用插件功能页",
       "x-wechat-min-version": "2.1.0"
     },
     "subpackages": {
       "$ref": "#/definitions/subpackages",
-      "description": "分包结构配置。",
+      "description": "分包结构配置",
       "x-wechat-client-min-version": "6.6.0",
       "x-wechat-min-version": "1.7.3"
     },
     "subPackages": {
       "$ref": "#/definitions/subpackages",
-      "description": "分包结构配置（兼容别名）。",
+      "description": "分包结构配置（兼容别名）",
       "x-wechat-client-min-version": "6.6.0",
       "x-wechat-min-version": "1.7.3"
     },
     "workers": {
-      "description": "Worker 代码目录配置。",
+      "description": "Worker 代码目录配置",
       "oneOf": [
         {
           "type": "string"
@@ -245,11 +245,11 @@
           "properties": {
             "path": {
               "type": "string",
-              "description": "Worker 目录路径。"
+              "description": "Worker 目录路径"
             },
             "isSubpackage": {
               "type": "boolean",
-              "description": "是否位于分包中。"
+              "description": "是否位于分包中"
             }
           }
         }
@@ -257,21 +257,21 @@
     },
     "requiredBackgroundModes": {
       "type": "array",
-      "description": "需要后台使用的能力列表。",
+      "description": "需要后台使用的能力列表",
       "items": {
         "type": "string"
       }
     },
     "requiredPrivateInfos": {
       "type": "array",
-      "description": "涉及隐私接口声明列表。",
+      "description": "涉及隐私接口声明列表",
       "items": {
         "type": "string"
       }
     },
     "plugins": {
       "type": "object",
-      "description": "插件配置。",
+      "description": "插件配置",
       "additionalProperties": {
         "type": "object",
         "additionalProperties": true,
@@ -291,7 +291,7 @@
     },
     "preloadRule": {
       "type": "object",
-      "description": "分包预下载规则。",
+      "description": "分包预下载规则",
       "additionalProperties": {
         "type": "object",
         "additionalProperties": false,
@@ -299,30 +299,30 @@
           "network": {
             "type": "string",
             "enum": ["all", "wifi"],
-            "description": "触发预下载的网络模式。"
+            "description": "触发预下载的网络模式"
           },
           "packages": {
             "type": "array",
             "items": {
               "type": "string"
             },
-            "description": "预下载分包列表。"
+            "description": "预下载分包列表"
           },
           "disable": {
             "type": "boolean",
-            "description": "是否禁用当前页面的预下载。"
+            "description": "是否禁用当前页面的预下载"
           }
         }
       }
     },
     "resizable": {
       "type": "boolean",
-      "description": "PC 小程序是否支持用户改变窗口大小，iPad 小程序是否支持旋转。",
+      "description": "PC 小程序是否支持用户改变窗口大小，iPad 小程序是否支持旋转",
       "x-wechat-min-version": "2.3.0"
     },
     "usingComponents": {
       "type": "object",
-      "description": "全局自定义组件配置。",
+      "description": "全局自定义组件配置",
       "x-wechat-devtools-min-version": "1.02.1810190",
       "propertyNames": {
         "type": "string"
@@ -333,7 +333,7 @@
     },
     "permission": {
       "type": "object",
-      "description": "小程序接口权限相关设置。",
+      "description": "小程序接口权限相关设置",
       "additionalProperties": {
         "type": "object",
         "additionalProperties": false,
@@ -341,24 +341,24 @@
         "properties": {
           "desc": {
             "type": "string",
-            "description": "接口用途说明。"
+            "description": "接口用途说明"
           }
         }
       }
     },
     "sitemapLocation": {
       "type": "string",
-      "description": "sitemap.json 的路径。"
+      "description": "sitemap.json 的路径"
     },
     "style": {
       "type": "string",
       "enum": ["v2"],
-      "description": "指定使用升级后的 weui 样式。",
+      "description": "指定使用升级后的 weui 样式",
       "x-wechat-min-version": "2.8.0"
     },
     "useExtendedLib": {
       "type": "object",
-      "description": "扩展库配置。",
+      "description": "扩展库配置",
       "x-wechat-min-version": "2.2.1",
       "additionalProperties": {
         "oneOf": [
@@ -376,71 +376,71 @@
     },
     "entranceDeclare": {
       "type": "object",
-      "description": "微信消息用小程序打开相关配置。",
+      "description": "微信消息用小程序打开相关配置",
       "additionalProperties": true
     },
     "darkmode": {
       "type": "boolean",
-      "description": "是否启用 DarkMode。",
+      "description": "是否启用 DarkMode",
       "x-wechat-devtools-min-version": "1.03.2004271",
       "x-wechat-min-version": "2.11.0",
       "x-wechat-client-min-version": "iOS 7.0.12 / Android 7.0.13"
     },
     "themeLocation": {
       "type": "string",
-      "description": "theme.json 路径；darkmode 为 true 时必填。",
+      "description": "theme.json 路径；darkmode 为 true 时必填",
       "x-wechat-devtools-min-version": "1.03.2004271"
     },
     "lazyCodeLoading": {
       "type": "string",
       "enum": ["requiredComponents"],
-      "description": "按需注入配置，目前仅支持 requiredComponents。"
+      "description": "按需注入配置，目前仅支持 requiredComponents"
     },
     "singlePage": {
       "type": "object",
-      "description": "单页模式配置。",
+      "description": "单页模式配置",
       "x-wechat-min-version": "2.11.3",
       "additionalProperties": false,
       "properties": {
         "navigationBarFit": {
           "type": "string",
           "enum": ["float", "squeezed"],
-          "description": "导航栏与页面的相交状态。"
+          "description": "导航栏与页面的相交状态"
         }
       }
     },
     "embeddedAppIdList": {
       "type": "array",
-      "description": "允许通过 wx.openEmbeddedMiniProgram 打开的小程序 appId 列表。",
+      "description": "允许通过 wx.openEmbeddedMiniProgram 打开的小程序 appId 列表",
       "items": {
         "type": "string"
       }
     },
     "halfPage": {
       "type": "object",
-      "description": "视频号直播半屏场景相关配置。",
+      "description": "视频号直播半屏场景相关配置",
       "additionalProperties": false,
       "properties": {
         "firstPageNavigationStyle": {
           "type": "string",
           "enum": ["default", "custom"],
-          "description": "第一个页面的顶部导航样式。"
+          "description": "第一个页面的顶部导航样式"
         }
       }
     },
     "debugOptions": {
       "type": "object",
-      "description": "调试相关配置。",
+      "description": "调试相关配置",
       "additionalProperties": false,
       "properties": {
         "enableFPSPanel": {
           "type": "boolean",
-          "description": "是否启用 FPS 面板。"
+          "description": "是否启用 FPS 面板"
         }
       }
     },
     "enablePassiveEvent": {
-      "description": "touch 相关事件是否默认为 passive。",
+      "description": "touch 相关事件是否默认为 passive",
       "x-wechat-min-version": "2.24.1",
       "oneOf": [
         {
@@ -465,7 +465,7 @@
     },
     "resolveAlias": {
       "type": "object",
-      "description": "模块路径映射规则。key 和 value 都应以 /* 结尾。",
+      "description": "模块路径映射规则。key 和 value 都应以 /* 结尾",
       "propertyNames": {
         "type": "string",
         "pattern": ".+/\\*$"
@@ -478,11 +478,11 @@
     "renderer": {
       "type": "string",
       "enum": ["webview", "skyline"],
-      "description": "全局默认渲染后端。"
+      "description": "全局默认渲染后端"
     },
     "rendererOptions": {
       "type": "object",
-      "description": "渲染后端配置。",
+      "description": "渲染后端配置",
       "additionalProperties": false,
       "properties": {
         "skyline": {
@@ -505,11 +505,11 @@
     "componentFramework": {
       "type": "string",
       "enum": ["exparser", "glass-easel"],
-      "description": "小程序组件框架。"
+      "description": "小程序组件框架"
     },
     "chatTools": {
       "type": "object",
-      "description": "聊天工具对应的独立分包配置。",
+      "description": "聊天工具对应的独立分包配置",
       "additionalProperties": false,
       "required": ["root", "entryPagePath", "desc"],
       "properties": {
@@ -532,7 +532,7 @@
     },
     "defaultLanguage": {
       "type": "string",
-      "description": "自动翻译源语言。",
+      "description": "自动翻译源语言",
       "enum": [
         "zh_CN",
         "en",
@@ -576,15 +576,15 @@
       "properties": {
         "root": {
           "type": "string",
-          "description": "分包根目录。"
+          "description": "分包根目录"
         },
         "name": {
           "type": "string",
-          "description": "分包别名。"
+          "description": "分包别名"
         },
         "pages": {
           "type": "array",
-          "description": "分包内页面路径列表。",
+          "description": "分包内页面路径列表",
           "minItems": 1,
           "items": {
             "type": "string"
@@ -592,7 +592,7 @@
         },
         "independent": {
           "type": "boolean",
-          "description": "是否独立分包。"
+          "description": "是否独立分包"
         }
       }
     },
@@ -604,3 +604,4 @@
     }
   }
 }
+
