@@ -46,28 +46,34 @@ Zed 支持通过 workspace settings 配置 JSON Schema（zconfig 或 .zed/settin
 
 ```json
 {
-  "json": {
-    "schemas": [
-      {
-        "fileMatch": ["src/app.json"],
-        "url": "https://raw.githubusercontent.com/Jungzl/wechat-miniprogram-json-schema/refs/heads/main/app.schema.json"
-      },
-      {
-        "fileMatch": ["src/pages/**/index.json"],
-        "url": "https://raw.githubusercontent.com/Jungzl/wechat-miniprogram-json-schema/refs/heads/main/page.schema.json"
-      },
-      {
-        "fileMatch": ["src/theme.json"],
-        "url": "https://raw.githubusercontent.com/Jungzl/wechat-miniprogram-json-schema/refs/heads/main/theme.schema.json"
+  "lsp": {
+    "json-language-server": {
+      "settings": {
+        "json": {
+          "schemas": [
+            {
+              "fileMatch": ["src/app.json"],
+              "url": "https://raw.githubusercontent.com/Jungzl/wechat-miniprogram-json-schema/refs/heads/main/app.schema.json"
+            },
+            {
+              "fileMatch": ["src/pages/**/index.json"],
+              "url": "https://raw.githubusercontent.com/Jungzl/wechat-miniprogram-json-schema/refs/heads/main/page.schema.json"
+            },
+            {
+              "fileMatch": ["src/theme.json"],
+              "url": "https://raw.githubusercontent.com/Jungzl/wechat-miniprogram-json-schema/refs/heads/main/theme.schema.json"
+            }
+          ]
+        }
       }
-    ]
+    }
   }
 }
 ```
 
 2. 重启 Zed 或在设置中重新加载工作区配置，打开相应 JSON 文件即可得到 Schema 驱动的提示与校验。
 
-说明：Zed 的配置结构可能随版本或插件略有差异，若上述路径无效，请在 Zed 设置中搜索 "json.schemas" 或查看官方文档并将对应键名映射为 `json.schemas` 或类似结构。
+说明：该结构等价于 VS Code 的 `json.schemas` 配置，Zed 会把它透传给 `json-language-server`；若使用自定义 zconfig 或旧版本，请参考 Zed 官方文档确认同样的 `lsp` → `json-language-server` → `settings` → `json` → `schemas` 层级。
 
 ## 推荐实践
 - 将编辑器映射指向仓库中具体的 commit/tag（例如使用 raw.githubusercontent.com/.../commit-hash/...），保证团队一致性。 
