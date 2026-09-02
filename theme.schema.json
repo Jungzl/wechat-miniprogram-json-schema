@@ -2,6 +2,8 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "WeChat Mini Program theme.json",
   "description": "微信小程序 DarkMode 变量配置文件。依据官方文档：https://developers.weixin.qq.com/miniprogram/dev/framework/ability/darkmode.html",
+  "markdownDescription": "微信小程序 **DarkMode 变量配置文件**。\n\n**支持最低版本**：\n\n- 基础库：2.11.0\n- 开发者工具：1.03.2004271\n- 客户端：iOS 7.0.12 / Android 7.0.13\n\n需在 `app.json` 中开启 `darkmode`，并通过 `themeLocation` 指定本文件路径，相关配置才能以 `@变量名` 方式引用本文件中的变量。\n\n详见官方文档：[DarkMode 适配指南](https://developers.weixin.qq.com/miniprogram/dev/framework/ability/darkmode.html)",
+  "x-intellij-html-description": "<p>微信小程序 <b>DarkMode 变量配置文件</b>。</p><p><b>支持最低版本</b>：</p><ul><li>基础库：2.11.0</li><li>开发者工具：1.03.2004271</li><li>客户端：iOS 7.0.12 / Android 7.0.13</li></ul><p>需在 <code>app.json</code> 中开启 <code>darkmode</code>，并通过 <code>themeLocation</code> 指定本文件路径，相关配置才能以 <code>@变量名</code> 方式引用本文件中的变量。</p><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/framework/ability/darkmode.html\">DarkMode 适配指南</a></p>",
   "type": "object",
   "additionalProperties": false,
   "required": ["light", "dark"],
@@ -11,26 +13,33 @@
   "properties": {
     "light": {
       "$ref": "#/definitions/themeVariables",
-      "description": "浅色模式下的变量定义"
+      "description": "浅色模式下的变量定义",
+      "markdownDescription": "浅色模式下的变量定义。\n\n**DarkMode 支持最低版本**：\n\n- 基础库：2.11.0\n- 开发者工具：1.03.2004271\n- 客户端：iOS 7.0.12 / Android 7.0.13",
+      "x-intellij-html-description": "<p>浅色模式下的变量定义。</p><p><b>DarkMode 支持最低版本</b>：</p><ul><li>基础库：2.11.0</li><li>开发者工具：1.03.2004271</li><li>客户端：iOS 7.0.12 / Android 7.0.13</li></ul>"
     },
     "dark": {
       "$ref": "#/definitions/themeVariables",
-      "description": "深色模式下的变量定义"
+      "description": "深色模式下的变量定义",
+      "markdownDescription": "深色模式下的变量定义。\n\n**DarkMode 支持最低版本**：\n\n- 基础库：2.11.0\n- 开发者工具：1.03.2004271\n- 客户端：iOS 7.0.12 / Android 7.0.13",
+      "x-intellij-html-description": "<p>深色模式下的变量定义。</p><p><b>DarkMode 支持最低版本</b>：</p><ul><li>基础库：2.11.0</li><li>开发者工具：1.03.2004271</li><li>客户端：iOS 7.0.12 / Android 7.0.13</li></ul>"
     }
   },
   "definitions": {
     "themeVariables": {
       "type": "object",
       "description": "以 key: value 形式定义变量名和值。变量可在 app.json 或 page.json 中以 @变量名 方式引用",
+      "markdownDescription": "以 `key: value` 形式定义变量名和值，`key` 为变量名，`value` 可为颜色值、`black`/`white` 或图标路径。变量可在 `app.json` 或 `page.json` 中以 `@变量名` 方式引用。\n\n**DarkMode 支持最低版本**：\n\n- 基础库：2.11.0\n- 开发者工具：1.03.2004271\n- 客户端：iOS 7.0.12 / Android 7.0.13",
+      "x-intellij-html-description": "<p>以 <code>key: value</code> 形式定义变量名和值，<code>key</code> 为变量名，<code>value</code> 可为颜色值、<code>black</code>/<code>white</code> 或图标路径。变量可在 <code>app.json</code> 或 <code>page.json</code> 中以 <code>@变量名</code> 方式引用。</p><p><b>DarkMode 支持最低版本</b>：</p><ul><li>基础库：2.11.0</li><li>开发者工具：1.03.2004271</li><li>客户端：iOS 7.0.12 / Android 7.0.13</li></ul>",
       "propertyNames": {
         "type": "string",
         "minLength": 1
       },
       "additionalProperties": {
         "type": "string",
-        "description": "变量值。文档示例包含颜色值、black/white 以及图标路径"
+        "description": "变量值。文档示例包含颜色值、black/white 以及图标路径",
+        "markdownDescription": "变量值。文档示例包含颜色值（如 `#f6f6f6`）、`black`/`white` 以及图标路径（如 `image/icon1_light.png`）",
+        "x-intellij-html-description": "<p>变量值。文档示例包含颜色值（如 <code>#f6f6f6</code>）、<code>black</code>/<code>white</code> 以及图标路径（如 <code>image/icon1_light.png</code>）</p>"
       }
     }
   }
 }
-

@@ -2,78 +2,111 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "WeChat Mini Program page.json",
   "description": "微信小程序页面配置。依据官方文档：https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/page.html",
+  "markdownDescription": "微信小程序页面配置。依据[官方文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/page.html)",
+  "x-intellij-html-description": "<p>微信小程序页面配置。依据<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/page.html\">官方文档</a></p>",
   "type": "object",
   "additionalProperties": false,
   "properties": {
     "navigationBarBackgroundColor": {
       "type": "string",
-      "description": "导航栏背景颜色"
+      "description": "导航栏背景颜色",
+      "markdownDescription": "导航栏背景颜色",
+      "x-intellij-html-description": "<p>导航栏背景颜色</p>"
     },
     "navigationBarTextStyle": {
       "type": "string",
       "enum": ["black", "white"],
-      "description": "导航栏标题、状态栏颜色，仅支持 black / white"
+      "description": "导航栏标题、状态栏颜色，仅支持 black / white",
+      "markdownDescription": "导航栏标题、状态栏颜色，仅支持 `black` / `white`",
+      "x-intellij-html-description": "<p>导航栏标题、状态栏颜色，仅支持 <code>black</code> / <code>white</code></p>"
     },
     "navigationBarTitleText": {
       "type": "string",
-      "description": "导航栏标题文字内容"
+      "description": "导航栏标题文字内容",
+      "markdownDescription": "导航栏标题文字内容",
+      "x-intellij-html-description": "<p>导航栏标题文字内容</p>"
     },
     "navigationStyle": {
       "type": "string",
       "enum": ["default", "custom"],
+      "markdownEnumDescriptions": ["默认样式", "自定义导航栏，只保留右上角胶囊按钮"],
       "description": "导航栏样式，仅支持 default / custom。iOS/Android 客户端 7.0.0 以下版本仅在 app.json 中生效",
+      "markdownDescription": "导航栏样式，仅支持 `default` / `custom`。iOS/Android 客户端 7.0.0 以下版本仅在 `app.json` 中生效\n\n- `default`：默认样式\n- `custom`：自定义导航栏，只保留右上角胶囊按钮\n\n**支持最低版本**：\n\n- 基础库：3.6.1 (Windows/Mac)\n- 客户端：iOS/Android 7.0.0",
+      "x-intellij-html-description": "<p>导航栏样式，仅支持 <code>default</code> / <code>custom</code>。iOS/Android 客户端 7.0.0 以下版本仅在 <code>app.json</code> 中生效</p><ul><li><code>default</code>：默认样式</li><li><code>custom</code>：自定义导航栏，只保留右上角胶囊按钮</li></ul><p><b>支持最低版本</b>：</p><ul><li>基础库：3.6.1 (Windows/Mac)</li><li>客户端：iOS/Android 7.0.0</li></ul>",
       "x-wechat-client-min-version": "iOS/Android 7.0.0",
       "x-wechat-min-version": "3.6.1 (Windows/Mac)"
     },
     "homeButton": {
       "type": "boolean",
       "description": "在非首页、非页面栈最底层页面或非 tabBar 内页面中的导航栏展示 home 键",
+      "markdownDescription": "在非首页、非页面栈最底层页面或非 `tabBar` 内页面中的导航栏展示 `home` 键\n\n**支持最低版本**：\n\n- 客户端：8.0.24",
+      "x-intellij-html-description": "<p>在非首页、非页面栈最底层页面或非 <code>tabBar</code> 内页面中的导航栏展示 <code>home</code> 键</p><p><b>支持最低版本</b>：</p><ul><li>客户端：8.0.24</li></ul>",
       "x-wechat-client-min-version": "8.0.24"
     },
     "backgroundColor": {
       "type": "string",
-      "description": "窗口背景色"
+      "description": "窗口背景色",
+      "markdownDescription": "窗口背景色",
+      "x-intellij-html-description": "<p>窗口背景色</p>"
     },
     "backgroundColorContent": {
       "type": "string",
-      "description": "页面容器背景色"
+      "description": "页面容器背景色",
+      "markdownDescription": "页面容器背景色",
+      "x-intellij-html-description": "<p>页面容器背景色</p>"
     },
     "backgroundTextStyle": {
       "type": "string",
       "enum": ["dark", "light"],
-      "description": "下拉 loading 的样式，仅支持 dark / light"
+      "description": "下拉 loading 的样式，仅支持 dark / light",
+      "markdownDescription": "下拉 loading 的样式，仅支持 `dark` / `light`",
+      "x-intellij-html-description": "<p>下拉 loading 的样式，仅支持 <code>dark</code> / <code>light</code></p>"
     },
     "backgroundColorTop": {
       "type": "string",
       "description": "顶部窗口背景色，仅 iOS 支持",
+      "markdownDescription": "顶部窗口背景色，仅 iOS 支持\n\n**支持最低版本**：\n\n- 客户端：6.5.16",
+      "x-intellij-html-description": "<p>顶部窗口背景色，仅 iOS 支持</p><p><b>支持最低版本</b>：</p><ul><li>客户端：6.5.16</li></ul>",
       "x-wechat-client-min-version": "6.5.16"
     },
     "backgroundColorBottom": {
       "type": "string",
       "description": "底部窗口背景色，仅 iOS 支持",
+      "markdownDescription": "底部窗口背景色，仅 iOS 支持\n\n**支持最低版本**：\n\n- 客户端：6.5.16",
+      "x-intellij-html-description": "<p>底部窗口背景色，仅 iOS 支持</p><p><b>支持最低版本</b>：</p><ul><li>客户端：6.5.16</li></ul>",
       "x-wechat-client-min-version": "6.5.16"
     },
     "enablePullDownRefresh": {
       "type": "boolean",
-      "description": "是否开启当前页面下拉刷新"
+      "description": "是否开启当前页面下拉刷新",
+      "markdownDescription": "是否开启当前页面下拉刷新",
+      "x-intellij-html-description": "<p>是否开启当前页面下拉刷新</p>"
     },
     "onReachBottomDistance": {
       "type": "number",
-      "description": "页面上拉触底事件触发时距页面底部距离，单位 px"
+      "description": "页面上拉触底事件触发时距页面底部距离，单位 px",
+      "markdownDescription": "页面上拉触底事件触发时距页面底部距离，单位 `px`",
+      "x-intellij-html-description": "<p>页面上拉触底事件触发时距页面底部距离，单位 <code>px</code></p>"
     },
     "pageOrientation": {
       "type": "string",
       "enum": ["auto", "portrait", "landscape"],
       "description": "屏幕旋转设置，支持 auto / portrait / landscape",
+      "markdownDescription": "屏幕旋转设置，支持 `auto` / `portrait` / `landscape`\n\n**支持最低版本**：\n\n- 基础库：2.4.0 (auto) / 2.5.0 (landscape)",
+      "x-intellij-html-description": "<p>屏幕旋转设置，支持 <code>auto</code> / <code>portrait</code> / <code>landscape</code></p><p><b>支持最低版本</b>：</p><ul><li>基础库：2.4.0 (auto) / 2.5.0 (landscape)</li></ul>",
       "x-wechat-min-version": "2.4.0 (auto) / 2.5.0 (landscape)"
     },
     "disableScroll": {
       "type": "boolean",
-      "description": "设置为 true 则页面整体不能上下滚动。只在页面配置中有效"
+      "description": "设置为 true 则页面整体不能上下滚动。只在页面配置中有效",
+      "markdownDescription": "设置为 `true` 则页面整体不能上下滚动。只在页面配置中有效",
+      "x-intellij-html-description": "<p>设置为 <code>true</code> 则页面整体不能上下滚动。只在页面配置中有效</p>"
     },
     "usingComponents": {
       "type": "object",
       "description": "页面自定义组件配置",
+      "markdownDescription": "页面自定义组件配置\n\n**支持最低版本**：\n\n- 基础库：1.6.3",
+      "x-intellij-html-description": "<p>页面自定义组件配置</p><p><b>支持最低版本</b>：</p><ul><li>基础库：1.6.3</li></ul>",
       "x-wechat-min-version": "1.6.3",
       "propertyNames": {
         "type": "string"
@@ -86,47 +119,65 @@
       "type": "string",
       "enum": ["static", "dynamic", "capture"],
       "description": "页面初始渲染缓存配置",
+      "markdownDescription": "页面初始渲染缓存配置\n\n**支持最低版本**：\n\n- 基础库：2.11.1",
+      "x-intellij-html-description": "<p>页面初始渲染缓存配置</p><p><b>支持最低版本</b>：</p><ul><li>基础库：2.11.1</li></ul>",
       "x-wechat-min-version": "2.11.1"
     },
     "style": {
       "type": "string",
       "enum": ["default", "v2"],
       "description": "启用新版的组件样式",
+      "markdownDescription": "启用新版的组件样式\n\n**支持最低版本**：\n\n- 基础库：2.10.2",
+      "x-intellij-html-description": "<p>启用新版的组件样式</p><p><b>支持最低版本</b>：</p><ul><li>基础库：2.10.2</li></ul>",
       "x-wechat-min-version": "2.10.2"
     },
     "singlePage": {
       "type": "object",
       "description": "单页模式相关配置",
+      "markdownDescription": "单页模式相关配置\n\n**支持最低版本**：\n\n- 基础库：2.12.0",
+      "x-intellij-html-description": "<p>单页模式相关配置</p><p><b>支持最低版本</b>：</p><ul><li>基础库：2.12.0</li></ul>",
       "x-wechat-min-version": "2.12.0",
       "additionalProperties": false,
       "properties": {
         "navigationBarFit": {
           "type": "string",
           "enum": ["float", "squeezed"],
-          "description": "导航栏与页面的相交状态"
+          "markdownEnumDescriptions": ["导航栏浮在页面上，与页面相交", "页面被导航栏挤压，与页面不相交"],
+          "description": "导航栏与页面的相交状态",
+          "markdownDescription": "导航栏与页面的相交状态\n\n- `float`：导航栏浮在页面上，与页面相交\n- `squeezed`：页面被导航栏挤压，与页面不相交",
+          "x-intellij-html-description": "<p>导航栏与页面的相交状态</p><ul><li><code>float</code>：导航栏浮在页面上，与页面相交</li><li><code>squeezed</code>：页面被导航栏挤压，与页面不相交</li></ul>"
         }
       }
     },
     "restartStrategy": {
       "type": "string",
       "enum": ["homePage", "homePageAndLatestPage"],
+      "markdownEnumDescriptions": ["（默认值）如果从这个页面退出小程序，下次将从首页冷启动", "如果从这个页面退出小程序，下次冷启动后立刻加载这个页面，页面的参数保持不变（不可用于 tab 页）"],
       "description": "重新启动策略配置",
+      "markdownDescription": "重新启动策略配置\n\n- `homePage`：（默认值）如果从这个页面退出小程序，下次将从首页冷启动\n- `homePageAndLatestPage`：如果从这个页面退出小程序，下次冷启动后立刻加载这个页面，页面的参数保持不变（不可用于 tab 页）\n\n**支持最低版本**：\n\n- 基础库：2.8.0",
+      "x-intellij-html-description": "<p>重新启动策略配置</p><ul><li><code>homePage</code>：（默认值）如果从这个页面退出小程序，下次将从首页冷启动</li><li><code>homePageAndLatestPage</code>：如果从这个页面退出小程序，下次冷启动后立刻加载这个页面，页面的参数保持不变（不可用于 tab 页）</li></ul><p><b>支持最低版本</b>：</p><ul><li>基础库：2.8.0</li></ul>",
       "x-wechat-min-version": "2.8.0"
     },
     "handleWebviewPreload": {
       "type": "string",
       "enum": ["static", "manual", "auto"],
       "description": "控制预加载下个页面的时机",
+      "markdownDescription": "控制预加载下个页面的时机\n\n**支持最低版本**：\n\n- 基础库：2.15.0",
+      "x-intellij-html-description": "<p>控制预加载下个页面的时机</p><p><b>支持最低版本</b>：</p><ul><li>基础库：2.15.0</li></ul>",
       "x-wechat-min-version": "2.15.0"
     },
     "visualEffectInBackground": {
       "type": "string",
       "enum": ["hidden", "none"],
       "description": "切入系统后台时，隐藏页面内容以保护用户隐私",
+      "markdownDescription": "切入系统后台时，隐藏页面内容以保护用户隐私\n\n**支持最低版本**：\n\n- 基础库：2.15.0",
+      "x-intellij-html-description": "<p>切入系统后台时，隐藏页面内容以保护用户隐私</p><p><b>支持最低版本</b>：</p><ul><li>基础库：2.15.0</li></ul>",
       "x-wechat-min-version": "2.15.0"
     },
     "enablePassiveEvent": {
       "description": "事件监听是否为 passive",
+      "markdownDescription": "事件监听是否为 `passive`\n\n**支持最低版本**：\n\n- 基础库：2.24.1",
+      "x-intellij-html-description": "<p>事件监听是否为 <code>passive</code></p><p><b>支持最低版本</b>：</p><ul><li>基础库：2.24.1</li></ul>",
       "x-wechat-min-version": "2.24.1",
       "oneOf": [
         {
@@ -153,11 +204,15 @@
       "type": "string",
       "enum": ["webview", "skyline"],
       "description": "渲染后端",
+      "markdownDescription": "渲染后端\n\n**支持最低版本**：\n\n- 基础库：2.30.4",
+      "x-intellij-html-description": "<p>渲染后端</p><p><b>支持最低版本</b>：</p><ul><li>基础库：2.30.4</li></ul>",
       "x-wechat-min-version": "2.30.4"
     },
     "rendererOptions": {
       "type": "object",
       "description": "渲染后端选项",
+      "markdownDescription": "渲染后端选项\n\n**支持最低版本**：\n\n- 基础库：3.1.0",
+      "x-intellij-html-description": "<p>渲染后端选项</p><p><b>支持最低版本</b>：</p><ul><li>基础库：3.1.0</li></ul>",
       "x-wechat-min-version": "3.1.0",
       "additionalProperties": false,
       "properties": {
@@ -185,6 +240,8 @@
       "type": "string",
       "enum": ["exparser", "glass-easel"],
       "description": "组件框架",
+      "markdownDescription": "组件框架\n\n**支持最低版本**：\n\n- 基础库：2.30.4",
+      "x-intellij-html-description": "<p>组件框架</p><p><b>支持最低版本</b>：</p><ul><li>基础库：2.30.4</li></ul>",
       "x-wechat-min-version": "2.30.4"
     }
   }

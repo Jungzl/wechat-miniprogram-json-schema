@@ -2,17 +2,23 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "WeChat Mini Program app.json",
   "description": "微信小程序全局配置。依据官方文档：https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html",
+  "markdownDescription": "微信小程序全局配置。依据[官方文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html)",
+  "x-intellij-html-description": "<p>微信小程序全局配置。依据<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html\">官方文档</a></p>",
   "type": "object",
   "additionalProperties": false,
   "required": ["pages"],
   "properties": {
     "entryPagePath": {
       "type": "string",
-      "description": "小程序默认启动路径（首页）"
+      "description": "小程序默认启动路径（首页）",
+      "markdownDescription": "小程序默认启动路径（首页）\n\n详见官方文档：[entryPagePath](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#entryPagePath)",
+      "x-intellij-html-description": "<p>小程序默认启动路径（首页）</p><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#entryPagePath\">entryPagePath</a></p>"
     },
     "pages": {
       "type": "array",
       "description": "页面路径列表。未指定 entryPagePath 时，第一项为首页",
+      "markdownDescription": "页面路径列表。未指定 `entryPagePath` 时，第一项为首页\n\n详见官方文档：[pages](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#pages)",
+      "x-intellij-html-description": "<p>页面路径列表。未指定 <code>entryPagePath</code> 时，第一项为首页</p><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#pages\">pages</a></p>",
       "minItems": 1,
       "items": {
         "type": "string"
@@ -21,11 +27,15 @@
     "window": {
       "type": "object",
       "description": "全局默认窗口表现",
+      "markdownDescription": "全局默认窗口表现\n\n详见官方文档：[window](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#window)",
+      "x-intellij-html-description": "<p>全局默认窗口表现</p><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#window\">window</a></p>",
       "additionalProperties": false,
       "properties": {
         "navigationBarBackgroundColor": {
           "type": "string",
-          "description": "导航栏背景颜色"
+          "description": "导航栏背景颜色",
+          "markdownDescription": "导航栏背景颜色",
+          "x-intellij-html-description": "<p>导航栏背景颜色</p>"
         },
         "navigationBarTextStyle": {
           "oneOf": [
@@ -38,28 +48,41 @@
               "pattern": "^@"
             }
           ],
-          "description": "导航栏标题颜色，仅支持 black / white"
+          "description": "导航栏标题颜色，仅支持 black / white",
+          "markdownDescription": "导航栏标题颜色，仅支持 `black` / `white`",
+          "x-intellij-html-description": "<p>导航栏标题颜色，仅支持 <code>black</code> / <code>white</code></p>"
         },
         "navigationBarTitleText": {
           "type": "string",
-          "description": "导航栏标题文字内容"
+          "description": "导航栏标题文字内容",
+          "markdownDescription": "导航栏标题文字内容",
+          "x-intellij-html-description": "<p>导航栏标题文字内容</p>"
         },
         "navigationStyle": {
           "type": "string",
           "enum": ["default", "custom"],
-          "description": "导航栏样式"
+          "markdownEnumDescriptions": ["默认样式", "自定义导航栏，只保留右上角胶囊按钮"],
+          "description": "导航栏样式",
+          "markdownDescription": "导航栏样式\n\n- `default`：默认样式\n- `custom`：自定义导航栏，只保留右上角胶囊按钮",
+          "x-intellij-html-description": "<p>导航栏样式</p><ul><li><code>default</code>：默认样式</li><li><code>custom</code>：自定义导航栏，只保留右上角胶囊按钮</li></ul>"
         },
         "backgroundColor": {
           "type": "string",
-          "description": "窗口背景色"
+          "description": "窗口背景色",
+          "markdownDescription": "窗口背景色",
+          "x-intellij-html-description": "<p>窗口背景色</p>"
         },
         "backgroundColorTop": {
           "type": "string",
-          "description": "顶部窗口背景色，仅 iOS 支持"
+          "description": "顶部窗口背景色，仅 iOS 支持",
+          "markdownDescription": "顶部窗口背景色，仅 iOS 支持",
+          "x-intellij-html-description": "<p>顶部窗口背景色，仅 iOS 支持</p>"
         },
         "backgroundColorBottom": {
           "type": "string",
-          "description": "底部窗口背景色，仅 iOS 支持"
+          "description": "底部窗口背景色，仅 iOS 支持",
+          "markdownDescription": "底部窗口背景色，仅 iOS 支持",
+          "x-intellij-html-description": "<p>底部窗口背景色，仅 iOS 支持</p>"
         },
         "backgroundTextStyle": {
           "oneOf": [
@@ -72,64 +95,91 @@
               "pattern": "^@"
             }
           ],
-          "description": "下拉 loading 样式，仅支持 dark / light"
+          "description": "下拉 loading 样式，仅支持 dark / light",
+          "markdownDescription": "下拉 loading 样式，仅支持 `dark` / `light`",
+          "x-intellij-html-description": "<p>下拉 loading 样式，仅支持 <code>dark</code> / <code>light</code></p>"
         },
         "enablePullDownRefresh": {
           "type": "boolean",
-          "description": "是否开启下拉刷新"
+          "description": "是否开启下拉刷新",
+          "markdownDescription": "是否开启下拉刷新",
+          "x-intellij-html-description": "<p>是否开启下拉刷新</p>"
         },
         "onReachBottomDistance": {
           "type": "number",
-          "description": "页面上拉触底事件触发时距页面底部距离，单位 px"
+          "description": "页面上拉触底事件触发时距页面底部距离，单位 px",
+          "markdownDescription": "页面上拉触底事件触发时距页面底部距离，单位 `px`",
+          "x-intellij-html-description": "<p>页面上拉触底事件触发时距页面底部距离，单位 <code>px</code></p>"
         },
         "pageOrientation": {
           "type": "string",
           "enum": ["portrait", "landscape", "auto"],
-          "description": "屏幕旋转设置"
+          "description": "屏幕旋转设置",
+          "markdownDescription": "屏幕旋转设置",
+          "x-intellij-html-description": "<p>屏幕旋转设置</p>"
         },
         "restartStrategy": {
           "type": "string",
           "enum": ["homePage", "homePageAndLatestPage"],
-          "description": "冷启动时页面恢复策略"
+          "markdownEnumDescriptions": ["（默认值）如果从这个页面退出小程序，下次将从首页冷启动", "如果从这个页面退出小程序，下次冷启动后立刻加载这个页面，页面的参数保持不变（不可用于 tab 页）"],
+          "description": "冷启动时页面恢复策略",
+          "markdownDescription": "冷启动时页面恢复策略\n\n- `homePage`：（默认值）如果从这个页面退出小程序，下次将从首页冷启动\n- `homePageAndLatestPage`：如果从这个页面退出小程序，下次冷启动后立刻加载这个页面，页面的参数保持不变（不可用于 tab 页）\n\n详见官方文档：[restartStrategy](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#restartStrategy)",
+          "x-intellij-html-description": "<p>冷启动时页面恢复策略</p><ul><li><code>homePage</code>：（默认值）如果从这个页面退出小程序，下次将从首页冷启动</li><li><code>homePageAndLatestPage</code>：如果从这个页面退出小程序，下次冷启动后立刻加载这个页面，页面的参数保持不变（不可用于 tab 页）</li></ul><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#restartStrategy\">restartStrategy</a></p>"
         },
         "initialRenderingCache": {
           "type": "string",
           "enum": ["static", "dynamic", "capture"],
-          "description": "页面初始渲染缓存配置"
+          "description": "页面初始渲染缓存配置",
+          "markdownDescription": "页面初始渲染缓存配置",
+          "x-intellij-html-description": "<p>页面初始渲染缓存配置</p>"
         },
         "handleWebviewPreload": {
           "type": "string",
           "enum": ["static", "manual", "auto"],
-          "description": "WebView 预加载控制"
+          "description": "WebView 预加载控制",
+          "markdownDescription": "WebView 预加载控制",
+          "x-intellij-html-description": "<p>WebView 预加载控制</p>"
         },
         "visualEffectInBackground": {
           "type": "string",
           "enum": ["none", "hidden"],
-          "description": "小程序切后台后界面视觉表现"
+          "description": "小程序切后台后界面视觉表现",
+          "markdownDescription": "小程序切后台后界面视觉表现",
+          "x-intellij-html-description": "<p>小程序切后台后界面视觉表现</p>"
         },
         "homeButton": {
           "type": "boolean",
-          "description": "是否在左上角显示 home 按钮"
+          "description": "是否在左上角显示 home 按钮",
+          "markdownDescription": "是否在左上角显示 `home` 按钮",
+          "x-intellij-html-description": "<p>是否在左上角显示 <code>home</code> 按钮</p>"
         }
       }
     },
     "tabBar": {
       "type": "object",
       "description": "底部 tab 栏配置",
+      "markdownDescription": "底部 tab 栏配置\n\n详见官方文档：[tabBar](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#tabBar)",
+      "x-intellij-html-description": "<p>底部 tab 栏配置</p><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#tabBar\">tabBar</a></p>",
       "additionalProperties": false,
       "required": ["list"],
       "properties": {
         "color": {
           "type": "string",
-          "description": "tab 上文字默认颜色"
+          "description": "tab 上文字默认颜色",
+          "markdownDescription": "tab 上文字默认颜色",
+          "x-intellij-html-description": "<p>tab 上文字默认颜色</p>"
         },
         "selectedColor": {
           "type": "string",
-          "description": "tab 上文字选中时颜色"
+          "description": "tab 上文字选中时颜色",
+          "markdownDescription": "tab 上文字选中时颜色",
+          "x-intellij-html-description": "<p>tab 上文字选中时颜色</p>"
         },
         "backgroundColor": {
           "type": "string",
-          "description": "tab 背景色"
+          "description": "tab 背景色",
+          "markdownDescription": "tab 背景色",
+          "x-intellij-html-description": "<p>tab 背景色</p>"
         },
         "borderStyle": {
           "oneOf": [
@@ -142,20 +192,28 @@
               "pattern": "^@"
             }
           ],
-          "description": "tabBar 上边框颜色"
+          "description": "tabBar 上边框颜色",
+          "markdownDescription": "`tabBar` 上边框颜色",
+          "x-intellij-html-description": "<p><code>tabBar</code> 上边框颜色</p>"
         },
         "position": {
           "type": "string",
           "enum": ["bottom", "top"],
-          "description": "tabBar 位置"
+          "description": "tabBar 位置",
+          "markdownDescription": "`tabBar` 位置",
+          "x-intellij-html-description": "<p><code>tabBar</code> 位置</p>"
         },
         "custom": {
           "type": "boolean",
-          "description": "是否自定义 tabBar"
+          "description": "是否自定义 tabBar",
+          "markdownDescription": "是否自定义 `tabBar`",
+          "x-intellij-html-description": "<p>是否自定义 <code>tabBar</code></p>"
         },
         "list": {
           "type": "array",
           "description": "tab 项列表，最少 2 项，最多 5 项",
+          "markdownDescription": "tab 项列表，最少 2 项，最多 5 项",
+          "x-intellij-html-description": "<p>tab 项列表，最少 2 项，最多 5 项</p>",
           "minItems": 2,
           "maxItems": 5,
           "items": {
@@ -165,19 +223,27 @@
             "properties": {
               "pagePath": {
                 "type": "string",
-                "description": "页面路径，必须在 pages 中先定义"
+                "description": "页面路径，必须在 pages 中先定义",
+                "markdownDescription": "页面路径，必须在 pages 中先定义",
+                "x-intellij-html-description": "<p>页面路径，必须在 pages 中先定义</p>"
               },
               "text": {
                 "type": "string",
-                "description": "tab 文字"
+                "description": "tab 文字",
+                "markdownDescription": "tab 文字",
+                "x-intellij-html-description": "<p>tab 文字</p>"
               },
               "iconPath": {
                 "type": "string",
-                "description": "未选中图标路径；position 为 top 时不显示"
+                "description": "未选中图标路径；position 为 top 时不显示",
+                "markdownDescription": "未选中图标路径；`position` 为 `top` 时不显示",
+                "x-intellij-html-description": "<p>未选中图标路径；<code>position</code> 为 <code>top</code> 时不显示</p>"
               },
               "selectedIconPath": {
                 "type": "string",
-                "description": "选中图标路径；position 为 top 时不显示"
+                "description": "选中图标路径；position 为 top 时不显示",
+                "markdownDescription": "选中图标路径；`position` 为 `top` 时不显示",
+                "x-intellij-html-description": "<p>选中图标路径；<code>position</code> 为 <code>top</code> 时不显示</p>"
               }
             }
           }
@@ -187,6 +253,8 @@
     "networkTimeout": {
       "type": "object",
       "description": "各类网络请求超时时间，单位 ms",
+      "markdownDescription": "各类网络请求超时时间，单位 `ms`\n\n详见官方文档：[networkTimeout](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#networkTimeout)",
+      "x-intellij-html-description": "<p>各类网络请求超时时间，单位 <code>ms</code></p><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#networkTimeout\">networkTimeout</a></p>",
       "additionalProperties": false,
       "properties": {
         "request": {
@@ -213,27 +281,37 @@
     },
     "debug": {
       "type": "boolean",
-      "description": "是否开启 debug 模式"
+      "description": "是否开启 debug 模式",
+      "markdownDescription": "是否开启 `debug` 模式\n\n详见官方文档：[debug](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#debug)",
+      "x-intellij-html-description": "<p>是否开启 <code>debug</code> 模式</p><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#debug\">debug</a></p>"
     },
     "functionalPages": {
       "type": "boolean",
       "description": "是否启用插件功能页",
+      "markdownDescription": "是否启用插件功能页\n\n**支持最低版本**：\n\n- 基础库：2.1.0\n\n详见官方文档：[functionalPages](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#functionalPages)",
+      "x-intellij-html-description": "<p>是否启用插件功能页</p><p><b>支持最低版本</b>：</p><ul><li>基础库：2.1.0</li></ul><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#functionalPages\">functionalPages</a></p>",
       "x-wechat-min-version": "2.1.0"
     },
     "subpackages": {
       "$ref": "#/definitions/subpackages",
       "description": "分包结构配置",
+      "markdownDescription": "分包结构配置\n\n**支持最低版本**：\n\n- 基础库：1.7.3\n- 客户端：6.6.0\n\n详见官方文档：[subpackages](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#subpackages)",
+      "x-intellij-html-description": "<p>分包结构配置</p><p><b>支持最低版本</b>：</p><ul><li>基础库：1.7.3</li><li>客户端：6.6.0</li></ul><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#subpackages\">subpackages</a></p>",
       "x-wechat-client-min-version": "6.6.0",
       "x-wechat-min-version": "1.7.3"
     },
     "subPackages": {
       "$ref": "#/definitions/subpackages",
       "description": "分包结构配置（兼容别名）",
+      "markdownDescription": "分包结构配置（兼容别名）\n\n**支持最低版本**：\n\n- 基础库：1.7.3\n- 客户端：6.6.0\n\n详见官方文档：[subpackages](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#subpackages)",
+      "x-intellij-html-description": "<p>分包结构配置（兼容别名）</p><p><b>支持最低版本</b>：</p><ul><li>基础库：1.7.3</li><li>客户端：6.6.0</li></ul><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#subpackages\">subpackages</a></p>",
       "x-wechat-client-min-version": "6.6.0",
       "x-wechat-min-version": "1.7.3"
     },
     "workers": {
       "description": "Worker 代码目录配置",
+      "markdownDescription": "`Worker` 代码目录配置\n\n详见官方文档：[workers](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#workers)",
+      "x-intellij-html-description": "<p><code>Worker</code> 代码目录配置</p><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#workers\">workers</a></p>",
       "oneOf": [
         {
           "type": "string"
@@ -245,11 +323,15 @@
           "properties": {
             "path": {
               "type": "string",
-              "description": "Worker 目录路径"
+              "description": "Worker 目录路径",
+              "markdownDescription": "`Worker` 目录路径",
+              "x-intellij-html-description": "<p><code>Worker</code> 目录路径</p>"
             },
             "isSubpackage": {
               "type": "boolean",
-              "description": "是否位于分包中"
+              "description": "是否位于分包中",
+              "markdownDescription": "是否位于分包中",
+              "x-intellij-html-description": "<p>是否位于分包中</p>"
             }
           }
         }
@@ -258,6 +340,8 @@
     "requiredBackgroundModes": {
       "type": "array",
       "description": "需要后台使用的能力列表",
+      "markdownDescription": "需要后台使用的能力列表\n\n详见官方文档：[requiredBackgroundModes](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#requiredBackgroundModes)",
+      "x-intellij-html-description": "<p>需要后台使用的能力列表</p><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#requiredBackgroundModes\">requiredBackgroundModes</a></p>",
       "items": {
         "type": "string"
       }
@@ -265,6 +349,8 @@
     "requiredPrivateInfos": {
       "type": "array",
       "description": "涉及隐私接口声明列表",
+      "markdownDescription": "涉及隐私接口声明列表\n\n详见官方文档：[requiredPrivateInfos](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#requiredPrivateInfos)",
+      "x-intellij-html-description": "<p>涉及隐私接口声明列表</p><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#requiredPrivateInfos\">requiredPrivateInfos</a></p>",
       "items": {
         "type": "string"
       }
@@ -272,6 +358,8 @@
     "plugins": {
       "type": "object",
       "description": "插件配置",
+      "markdownDescription": "插件配置\n\n详见官方文档：[plugins](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#plugins)",
+      "x-intellij-html-description": "<p>插件配置</p><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#plugins\">plugins</a></p>",
       "additionalProperties": {
         "type": "object",
         "additionalProperties": true,
@@ -292,6 +380,8 @@
     "preloadRule": {
       "type": "object",
       "description": "分包预下载规则",
+      "markdownDescription": "分包预下载规则\n\n详见官方文档：[preloadRule](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#preloadRule)",
+      "x-intellij-html-description": "<p>分包预下载规则</p><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#preloadRule\">preloadRule</a></p>",
       "additionalProperties": {
         "type": "object",
         "additionalProperties": false,
@@ -299,18 +389,24 @@
           "network": {
             "type": "string",
             "enum": ["all", "wifi"],
-            "description": "触发预下载的网络模式"
+            "description": "触发预下载的网络模式",
+            "markdownDescription": "触发预下载的网络模式",
+            "x-intellij-html-description": "<p>触发预下载的网络模式</p>"
           },
           "packages": {
             "type": "array",
             "items": {
               "type": "string"
             },
-            "description": "预下载分包列表"
+            "description": "预下载分包列表",
+            "markdownDescription": "预下载分包列表",
+            "x-intellij-html-description": "<p>预下载分包列表</p>"
           },
           "disable": {
             "type": "boolean",
-            "description": "是否禁用当前页面的预下载"
+            "description": "是否禁用当前页面的预下载",
+            "markdownDescription": "是否禁用当前页面的预下载",
+            "x-intellij-html-description": "<p>是否禁用当前页面的预下载</p>"
           }
         }
       }
@@ -318,11 +414,15 @@
     "resizable": {
       "type": "boolean",
       "description": "PC 小程序是否支持用户改变窗口大小，iPad 小程序是否支持旋转",
+      "markdownDescription": "PC 小程序是否支持用户改变窗口大小，iPad 小程序是否支持旋转\n\n**支持最低版本**：\n\n- 基础库：2.3.0\n\n详见官方文档：[resizable](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#resizable)",
+      "x-intellij-html-description": "<p>PC 小程序是否支持用户改变窗口大小，iPad 小程序是否支持旋转</p><p><b>支持最低版本</b>：</p><ul><li>基础库：2.3.0</li></ul><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#resizable\">resizable</a></p>",
       "x-wechat-min-version": "2.3.0"
     },
     "usingComponents": {
       "type": "object",
       "description": "全局自定义组件配置",
+      "markdownDescription": "全局自定义组件配置\n\n**支持最低版本**：\n\n- 开发者工具：1.02.1810190\n\n详见官方文档：[usingComponents](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#usingComponents)",
+      "x-intellij-html-description": "<p>全局自定义组件配置</p><p><b>支持最低版本</b>：</p><ul><li>开发者工具：1.02.1810190</li></ul><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#usingComponents\">usingComponents</a></p>",
       "x-wechat-devtools-min-version": "1.02.1810190",
       "propertyNames": {
         "type": "string"
@@ -334,6 +434,8 @@
     "permission": {
       "type": "object",
       "description": "小程序接口权限相关设置",
+      "markdownDescription": "小程序接口权限相关设置\n\n详见官方文档：[permission](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#permission)",
+      "x-intellij-html-description": "<p>小程序接口权限相关设置</p><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#permission\">permission</a></p>",
       "additionalProperties": {
         "type": "object",
         "additionalProperties": false,
@@ -341,24 +443,32 @@
         "properties": {
           "desc": {
             "type": "string",
-            "description": "接口用途说明"
+            "description": "接口用途说明",
+            "markdownDescription": "接口用途说明",
+            "x-intellij-html-description": "<p>接口用途说明</p>"
           }
         }
       }
     },
     "sitemapLocation": {
       "type": "string",
-      "description": "sitemap.json 的路径"
+      "description": "sitemap.json 的路径",
+      "markdownDescription": "`sitemap.json` 的路径\n\n详见官方文档：[sitemapLocation](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#sitemapLocation)",
+      "x-intellij-html-description": "<p><code>sitemap.json</code> 的路径</p><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#sitemapLocation\">sitemapLocation</a></p>"
     },
     "style": {
       "type": "string",
       "enum": ["v2"],
       "description": "指定使用升级后的 weui 样式",
+      "markdownDescription": "指定使用升级后的 weui 样式\n\n**支持最低版本**：\n\n- 基础库：2.8.0\n\n详见官方文档：[style](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#style)",
+      "x-intellij-html-description": "<p>指定使用升级后的 weui 样式</p><p><b>支持最低版本</b>：</p><ul><li>基础库：2.8.0</li></ul><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#style\">style</a></p>",
       "x-wechat-min-version": "2.8.0"
     },
     "useExtendedLib": {
       "type": "object",
       "description": "扩展库配置",
+      "markdownDescription": "扩展库配置\n\n**支持最低版本**：\n\n- 基础库：2.2.1\n\n详见官方文档：[useExtendedLib](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#useExtendedLib)",
+      "x-intellij-html-description": "<p>扩展库配置</p><p><b>支持最低版本</b>：</p><ul><li>基础库：2.2.1</li></ul><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#useExtendedLib\">useExtendedLib</a></p>",
       "x-wechat-min-version": "2.2.1",
       "additionalProperties": {
         "oneOf": [
@@ -377,11 +487,15 @@
     "entranceDeclare": {
       "type": "object",
       "description": "微信消息用小程序打开相关配置",
+      "markdownDescription": "微信消息用小程序打开相关配置\n\n详见官方文档：[entranceDeclare](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#entranceDeclare)",
+      "x-intellij-html-description": "<p>微信消息用小程序打开相关配置</p><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#entranceDeclare\">entranceDeclare</a></p>",
       "additionalProperties": true
     },
     "darkmode": {
       "type": "boolean",
       "description": "是否启用 DarkMode",
+      "markdownDescription": "是否启用 DarkMode\n\n**支持最低版本**：\n\n- 基础库：2.11.0\n- 开发者工具：1.03.2004271\n- 客户端：iOS 7.0.12 / Android 7.0.13\n\n详见官方文档：[darkmode](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#darkmode)",
+      "x-intellij-html-description": "<p>是否启用 DarkMode</p><p><b>支持最低版本</b>：</p><ul><li>基础库：2.11.0</li><li>开发者工具：1.03.2004271</li><li>客户端：iOS 7.0.12 / Android 7.0.13</li></ul><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#darkmode\">darkmode</a></p>",
       "x-wechat-devtools-min-version": "1.03.2004271",
       "x-wechat-min-version": "2.11.0",
       "x-wechat-client-min-version": "iOS 7.0.12 / Android 7.0.13"
@@ -389,29 +503,41 @@
     "themeLocation": {
       "type": "string",
       "description": "theme.json 路径；darkmode 为 true 时必填",
+      "markdownDescription": "`theme.json` 路径；`darkmode` 为 `true` 时必填\n\n**支持最低版本**：\n\n- 开发者工具：1.03.2004271\n\n详见官方文档：[themeLocation](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#themeLocation)",
+      "x-intellij-html-description": "<p><code>theme.json</code> 路径；<code>darkmode</code> 为 <code>true</code> 时必填</p><p><b>支持最低版本</b>：</p><ul><li>开发者工具：1.03.2004271</li></ul><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#themeLocation\">themeLocation</a></p>",
       "x-wechat-devtools-min-version": "1.03.2004271"
     },
     "lazyCodeLoading": {
       "type": "string",
       "enum": ["requiredComponents"],
-      "description": "按需注入配置，目前仅支持 requiredComponents"
+      "markdownEnumDescriptions": ["开启小程序「按需注入」特性"],
+      "description": "按需注入配置，目前仅支持 requiredComponents",
+      "markdownDescription": "按需注入配置，目前仅支持 `requiredComponents`\n\n- `requiredComponents`：开启小程序「按需注入」特性\n\n详见官方文档：[lazyCodeLoading](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#lazyCodeLoading)",
+      "x-intellij-html-description": "<p>按需注入配置，目前仅支持 <code>requiredComponents</code></p><ul><li><code>requiredComponents</code>：开启小程序「按需注入」特性</li></ul><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#lazyCodeLoading\">lazyCodeLoading</a></p>"
     },
     "singlePage": {
       "type": "object",
       "description": "单页模式配置",
+      "markdownDescription": "单页模式配置\n\n**支持最低版本**：\n\n- 基础库：2.11.3\n\n详见官方文档：[singlePage](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#singlePage)",
+      "x-intellij-html-description": "<p>单页模式配置</p><p><b>支持最低版本</b>：</p><ul><li>基础库：2.11.3</li></ul><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#singlePage\">singlePage</a></p>",
       "x-wechat-min-version": "2.11.3",
       "additionalProperties": false,
       "properties": {
         "navigationBarFit": {
           "type": "string",
           "enum": ["float", "squeezed"],
-          "description": "导航栏与页面的相交状态"
+          "markdownEnumDescriptions": ["导航栏浮在页面上，与页面相交", "页面被导航栏挤压，与页面不相交"],
+          "description": "导航栏与页面的相交状态",
+          "markdownDescription": "导航栏与页面的相交状态\n\n- `float`：导航栏浮在页面上，与页面相交\n- `squeezed`：页面被导航栏挤压，与页面不相交",
+          "x-intellij-html-description": "<p>导航栏与页面的相交状态</p><ul><li><code>float</code>：导航栏浮在页面上，与页面相交</li><li><code>squeezed</code>：页面被导航栏挤压，与页面不相交</li></ul>"
         }
       }
     },
     "embeddedAppIdList": {
       "type": "array",
       "description": "允许通过 wx.openEmbeddedMiniProgram 打开的小程序 appId 列表",
+      "markdownDescription": "允许通过 `wx.openEmbeddedMiniProgram` 打开的小程序 `appId` 列表\n\n详见官方文档：[embeddedAppIdList](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#embeddedAppIdList)",
+      "x-intellij-html-description": "<p>允许通过 <code>wx.openEmbeddedMiniProgram</code> 打开的小程序 <code>appId</code> 列表</p><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#embeddedAppIdList\">embeddedAppIdList</a></p>",
       "items": {
         "type": "string"
       }
@@ -419,28 +545,38 @@
     "halfPage": {
       "type": "object",
       "description": "视频号直播半屏场景相关配置",
+      "markdownDescription": "视频号直播半屏场景相关配置\n\n详见官方文档：[halfPage](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#halfPage)",
+      "x-intellij-html-description": "<p>视频号直播半屏场景相关配置</p><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#halfPage\">halfPage</a></p>",
       "additionalProperties": false,
       "properties": {
         "firstPageNavigationStyle": {
           "type": "string",
           "enum": ["default", "custom"],
-          "description": "第一个页面的顶部导航样式"
+          "description": "第一个页面的顶部导航样式",
+          "markdownDescription": "第一个页面的顶部导航样式",
+          "x-intellij-html-description": "<p>第一个页面的顶部导航样式</p>"
         }
       }
     },
     "debugOptions": {
       "type": "object",
       "description": "调试相关配置",
+      "markdownDescription": "调试相关配置\n\n详见官方文档：[debugOptions](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#debugOptions)",
+      "x-intellij-html-description": "<p>调试相关配置</p><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#debugOptions\">debugOptions</a></p>",
       "additionalProperties": false,
       "properties": {
         "enableFPSPanel": {
           "type": "boolean",
-          "description": "是否启用 FPS 面板"
+          "description": "是否启用 FPS 面板",
+          "markdownDescription": "是否启用 `FPS` 面板",
+          "x-intellij-html-description": "<p>是否启用 <code>FPS</code> 面板</p>"
         }
       }
     },
     "enablePassiveEvent": {
       "description": "touch 相关事件是否默认为 passive",
+      "markdownDescription": "touch 相关事件是否默认为 `passive`\n\n**支持最低版本**：\n\n- 基础库：2.24.1\n\n详见官方文档：[enablePassiveEvent](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#enablePassiveEvent)",
+      "x-intellij-html-description": "<p>touch 相关事件是否默认为 <code>passive</code></p><p><b>支持最低版本</b>：</p><ul><li>基础库：2.24.1</li></ul><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#enablePassiveEvent\">enablePassiveEvent</a></p>",
       "x-wechat-min-version": "2.24.1",
       "oneOf": [
         {
@@ -466,6 +602,8 @@
     "resolveAlias": {
       "type": "object",
       "description": "模块路径映射规则。key 和 value 都应以 /* 结尾",
+      "markdownDescription": "模块路径映射规则。`key` 和 `value` 都应以 `/*` 结尾\n\n详见官方文档：[resolveAlias](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#resolveAlias)",
+      "x-intellij-html-description": "<p>模块路径映射规则。<code>key</code> 和 <code>value</code> 都应以 <code>/*</code> 结尾</p><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#resolveAlias\">resolveAlias</a></p>",
       "propertyNames": {
         "type": "string",
         "pattern": ".+/\\*$"
@@ -478,11 +616,15 @@
     "renderer": {
       "type": "string",
       "enum": ["webview", "skyline"],
-      "description": "全局默认渲染后端"
+      "description": "全局默认渲染后端",
+      "markdownDescription": "全局默认渲染后端\n\n详见官方文档：[renderer](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#renderer)",
+      "x-intellij-html-description": "<p>全局默认渲染后端</p><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#renderer\">renderer</a></p>"
     },
     "rendererOptions": {
       "type": "object",
       "description": "渲染后端配置",
+      "markdownDescription": "渲染后端配置\n\n详见官方文档：[rendererOptions](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#rendererOptions)",
+      "x-intellij-html-description": "<p>渲染后端配置</p><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#rendererOptions\">rendererOptions</a></p>",
       "additionalProperties": false,
       "properties": {
         "skyline": {
@@ -505,11 +647,15 @@
     "componentFramework": {
       "type": "string",
       "enum": ["exparser", "glass-easel"],
-      "description": "小程序组件框架"
+      "description": "小程序组件框架",
+      "markdownDescription": "小程序组件框架\n\n详见官方文档：[componentFramework](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#componentFramework)",
+      "x-intellij-html-description": "<p>小程序组件框架</p><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#componentFramework\">componentFramework</a></p>"
     },
     "chatTools": {
       "type": "object",
       "description": "聊天工具对应的独立分包配置",
+      "markdownDescription": "聊天工具对应的独立分包配置\n\n详见官方文档：[chatTools](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#chatTools)",
+      "x-intellij-html-description": "<p>聊天工具对应的独立分包配置</p><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#chatTools\">chatTools</a></p>",
       "additionalProperties": false,
       "required": ["root", "entryPagePath", "desc"],
       "properties": {
@@ -533,6 +679,8 @@
     "defaultLanguage": {
       "type": "string",
       "description": "自动翻译源语言",
+      "markdownDescription": "自动翻译源语言\n\n- `zh_CN`：中文\n- `en`：英语\n- `ar`：阿拉伯语\n- `de`：德语\n- `es`：西班牙语\n- `fr`：法语\n- `id`：印度尼西亚语\n- `it`：意大利语\n- `ja`：日语\n- `ko`：韩语\n- `ms`：马来语\n- `pt`：葡萄牙语\n- `ru`：俄语\n- `th`：泰语\n- `vi`：越南语\n- `tr`：土耳其语\n\n详见官方文档：[defaultLanguage](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#defaultLanguage)",
+      "x-intellij-html-description": "<p>自动翻译源语言</p><ul><li><code>zh_CN</code>：中文</li><li><code>en</code>：英语</li><li><code>ar</code>：阿拉伯语</li><li><code>de</code>：德语</li><li><code>es</code>：西班牙语</li><li><code>fr</code>：法语</li><li><code>id</code>：印度尼西亚语</li><li><code>it</code>：意大利语</li><li><code>ja</code>：日语</li><li><code>ko</code>：韩语</li><li><code>ms</code>：马来语</li><li><code>pt</code>：葡萄牙语</li><li><code>ru</code>：俄语</li><li><code>th</code>：泰语</li><li><code>vi</code>：越南语</li><li><code>tr</code>：土耳其语</li></ul><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#defaultLanguage\">defaultLanguage</a></p>",
       "enum": [
         "zh_CN",
         "en",
@@ -550,6 +698,24 @@
         "th",
         "vi",
         "tr"
+      ],
+      "markdownEnumDescriptions": [
+        "中文",
+        "英语",
+        "阿拉伯语",
+        "德语",
+        "西班牙语",
+        "法语",
+        "印度尼西亚语",
+        "意大利语",
+        "日语",
+        "韩语",
+        "马来语",
+        "葡萄牙语",
+        "俄语",
+        "泰语",
+        "越南语",
+        "土耳其语"
       ]
     }
   },
@@ -576,15 +742,21 @@
       "properties": {
         "root": {
           "type": "string",
-          "description": "分包根目录"
+          "description": "分包根目录",
+          "markdownDescription": "分包根目录",
+          "x-intellij-html-description": "<p>分包根目录</p>"
         },
         "name": {
           "type": "string",
-          "description": "分包别名"
+          "description": "分包别名",
+          "markdownDescription": "分包别名",
+          "x-intellij-html-description": "<p>分包别名</p>"
         },
         "pages": {
           "type": "array",
           "description": "分包内页面路径列表",
+          "markdownDescription": "分包内页面路径列表",
+          "x-intellij-html-description": "<p>分包内页面路径列表</p>",
           "minItems": 1,
           "items": {
             "type": "string"
@@ -592,7 +764,9 @@
         },
         "independent": {
           "type": "boolean",
-          "description": "是否独立分包"
+          "description": "是否独立分包",
+          "markdownDescription": "是否独立分包",
+          "x-intellij-html-description": "<p>是否独立分包</p>"
         }
       }
     },
