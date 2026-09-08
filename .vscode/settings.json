@@ -1,0 +1,12 @@
+{
+  "json.schemas": [
+    {
+      "fileMatch": ["app.demo.json"],
+      "url": "./app.schema.json"
+    },
+    {
+      "fileMatch": ["page.demo.json"],
+      "url": "./page.schema.json"
+    }
+  ]
+}

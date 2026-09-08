@@ -1,0 +1,6 @@
+{
+  "window": {
+    "navigationBarBackgroundColor": "#000000"
+  },
+  "pages": ["pages/home/index"]
+}
