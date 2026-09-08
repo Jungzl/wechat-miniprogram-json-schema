@@ -9,6 +9,7 @@
   "properties": {
     "navigationBarBackgroundColor": {
       "type": "string",
+      "default": "#000000",
       "description": "导航栏背景颜色",
       "markdownDescription": "导航栏背景颜色",
       "x-intellij-html-description": "<p>导航栏背景颜色</p>"
@@ -16,6 +17,7 @@
     "navigationBarTextStyle": {
       "type": "string",
       "enum": ["black", "white"],
+      "default": "white",
       "description": "导航栏标题、状态栏颜色，仅支持 black / white",
       "markdownDescription": "导航栏标题、状态栏颜色，仅支持 `black` / `white`",
       "x-intellij-html-description": "<p>导航栏标题、状态栏颜色，仅支持 <code>black</code> / <code>white</code></p>"
@@ -30,6 +32,7 @@
       "type": "string",
       "enum": ["default", "custom"],
       "markdownEnumDescriptions": ["默认样式", "自定义导航栏，只保留右上角胶囊按钮"],
+      "default": "default",
       "description": "导航栏样式，仅支持 default / custom。iOS/Android 客户端 7.0.0 以下版本仅在 app.json 中生效",
       "markdownDescription": "导航栏样式，仅支持 `default` / `custom`。iOS/Android 客户端 7.0.0 以下版本仅在 `app.json` 中生效\n\n- `default`：默认样式\n- `custom`：自定义导航栏，只保留右上角胶囊按钮\n\n**支持最低版本**：\n\n- 基础库：3.6.1 (Windows/Mac)\n- 客户端：iOS/Android 7.0.0",
       "x-intellij-html-description": "<p>导航栏样式，仅支持 <code>default</code> / <code>custom</code>。iOS/Android 客户端 7.0.0 以下版本仅在 <code>app.json</code> 中生效</p><ul><li><code>default</code>：默认样式</li><li><code>custom</code>：自定义导航栏，只保留右上角胶囊按钮</li></ul><p><b>支持最低版本</b>：</p><ul><li>基础库：3.6.1 (Windows/Mac)</li><li>客户端：iOS/Android 7.0.0</li></ul>",
@@ -38,6 +41,7 @@
     },
     "homeButton": {
       "type": "boolean",
+      "default": false,
       "description": "在非首页、非页面栈最底层页面或非 tabBar 内页面中的导航栏展示 home 键",
       "markdownDescription": "在非首页、非页面栈最底层页面或非 `tabBar` 内页面中的导航栏展示 `home` 键\n\n**支持最低版本**：\n\n- 客户端：8.0.24",
       "x-intellij-html-description": "<p>在非首页、非页面栈最底层页面或非 <code>tabBar</code> 内页面中的导航栏展示 <code>home</code> 键</p><p><b>支持最低版本</b>：</p><ul><li>客户端：8.0.24</li></ul>",
@@ -45,6 +49,7 @@
     },
     "backgroundColor": {
       "type": "string",
+      "default": "#ffffff",
       "description": "窗口背景色",
       "markdownDescription": "窗口背景色",
       "x-intellij-html-description": "<p>窗口背景色</p>"
@@ -58,12 +63,14 @@
     "backgroundTextStyle": {
       "type": "string",
       "enum": ["dark", "light"],
+      "default": "dark",
       "description": "下拉 loading 的样式，仅支持 dark / light",
       "markdownDescription": "下拉 loading 的样式，仅支持 `dark` / `light`",
       "x-intellij-html-description": "<p>下拉 loading 的样式，仅支持 <code>dark</code> / <code>light</code></p>"
     },
     "backgroundColorTop": {
       "type": "string",
+      "default": "#ffffff",
       "description": "顶部窗口背景色，仅 iOS 支持",
       "markdownDescription": "顶部窗口背景色，仅 iOS 支持\n\n**支持最低版本**：\n\n- 客户端：6.5.16",
       "x-intellij-html-description": "<p>顶部窗口背景色，仅 iOS 支持</p><p><b>支持最低版本</b>：</p><ul><li>客户端：6.5.16</li></ul>",
@@ -71,6 +78,7 @@
     },
     "backgroundColorBottom": {
       "type": "string",
+      "default": "#ffffff",
       "description": "底部窗口背景色，仅 iOS 支持",
       "markdownDescription": "底部窗口背景色，仅 iOS 支持\n\n**支持最低版本**：\n\n- 客户端：6.5.16",
       "x-intellij-html-description": "<p>底部窗口背景色，仅 iOS 支持</p><p><b>支持最低版本</b>：</p><ul><li>客户端：6.5.16</li></ul>",
@@ -78,12 +86,14 @@
     },
     "enablePullDownRefresh": {
       "type": "boolean",
+      "default": false,
       "description": "是否开启当前页面下拉刷新",
       "markdownDescription": "是否开启当前页面下拉刷新",
       "x-intellij-html-description": "<p>是否开启当前页面下拉刷新</p>"
     },
     "onReachBottomDistance": {
       "type": "number",
+      "default": 50,
       "description": "页面上拉触底事件触发时距页面底部距离，单位 px",
       "markdownDescription": "页面上拉触底事件触发时距页面底部距离，单位 `px`",
       "x-intellij-html-description": "<p>页面上拉触底事件触发时距页面底部距离，单位 <code>px</code></p>"
@@ -91,6 +101,7 @@
     "pageOrientation": {
       "type": "string",
       "enum": ["auto", "portrait", "landscape"],
+      "default": "portrait",
       "description": "屏幕旋转设置，支持 auto / portrait / landscape",
       "markdownDescription": "屏幕旋转设置，支持 `auto` / `portrait` / `landscape`\n\n**支持最低版本**：\n\n- 基础库：2.4.0 (auto) / 2.5.0 (landscape)",
       "x-intellij-html-description": "<p>屏幕旋转设置，支持 <code>auto</code> / <code>portrait</code> / <code>landscape</code></p><p><b>支持最低版本</b>：</p><ul><li>基础库：2.4.0 (auto) / 2.5.0 (landscape)</li></ul>",
@@ -98,6 +109,7 @@
     },
     "disableScroll": {
       "type": "boolean",
+      "default": false,
       "description": "设置为 true 则页面整体不能上下滚动。只在页面配置中有效",
       "markdownDescription": "设置为 `true` 则页面整体不能上下滚动。只在页面配置中有效",
       "x-intellij-html-description": "<p>设置为 <code>true</code> 则页面整体不能上下滚动。只在页面配置中有效</p>"
@@ -126,6 +138,7 @@
     "style": {
       "type": "string",
       "enum": ["default", "v2"],
+      "default": "default",
       "description": "启用新版的组件样式",
       "markdownDescription": "启用新版的组件样式\n\n**支持最低版本**：\n\n- 基础库：2.10.2",
       "x-intellij-html-description": "<p>启用新版的组件样式</p><p><b>支持最低版本</b>：</p><ul><li>基础库：2.10.2</li></ul>",
@@ -153,6 +166,7 @@
       "type": "string",
       "enum": ["homePage", "homePageAndLatestPage"],
       "markdownEnumDescriptions": ["（默认值）如果从这个页面退出小程序，下次将从首页冷启动", "如果从这个页面退出小程序，下次冷启动后立刻加载这个页面，页面的参数保持不变（不可用于 tab 页）"],
+      "default": "homePage",
       "description": "重新启动策略配置",
       "markdownDescription": "重新启动策略配置\n\n- `homePage`：（默认值）如果从这个页面退出小程序，下次将从首页冷启动\n- `homePageAndLatestPage`：如果从这个页面退出小程序，下次冷启动后立刻加载这个页面，页面的参数保持不变（不可用于 tab 页）\n\n**支持最低版本**：\n\n- 基础库：2.8.0",
       "x-intellij-html-description": "<p>重新启动策略配置</p><ul><li><code>homePage</code>：（默认值）如果从这个页面退出小程序，下次将从首页冷启动</li><li><code>homePageAndLatestPage</code>：如果从这个页面退出小程序，下次冷启动后立刻加载这个页面，页面的参数保持不变（不可用于 tab 页）</li></ul><p><b>支持最低版本</b>：</p><ul><li>基础库：2.8.0</li></ul>",
@@ -161,6 +175,7 @@
     "handleWebviewPreload": {
       "type": "string",
       "enum": ["static", "manual", "auto"],
+      "default": "static",
       "description": "控制预加载下个页面的时机",
       "markdownDescription": "控制预加载下个页面的时机\n\n**支持最低版本**：\n\n- 基础库：2.15.0",
       "x-intellij-html-description": "<p>控制预加载下个页面的时机</p><p><b>支持最低版本</b>：</p><ul><li>基础库：2.15.0</li></ul>",
@@ -188,13 +203,25 @@
           "additionalProperties": false,
           "properties": {
             "touchstart": {
-              "type": "boolean"
+              "type": "boolean",
+              "default": false,
+              "description": "是否设置 touchstart 事件为 passive",
+              "markdownDescription": "是否设置 `touchstart` 事件为 `passive`",
+              "x-intellij-html-description": "<p>是否设置 <code>touchstart</code> 事件为 <code>passive</code></p>"
             },
             "touchmove": {
-              "type": "boolean"
+              "type": "boolean",
+              "default": false,
+              "description": "是否设置 touchmove 事件为 passive",
+              "markdownDescription": "是否设置 `touchmove` 事件为 `passive`",
+              "x-intellij-html-description": "<p>是否设置 <code>touchmove</code> 事件为 <code>passive</code></p>"
             },
             "wheel": {
-              "type": "boolean"
+              "type": "boolean",
+              "default": false,
+              "description": "是否设置 wheel 事件为 passive",
+              "markdownDescription": "是否设置 `wheel` 事件为 `passive`",
+              "x-intellij-html-description": "<p>是否设置 <code>wheel</code> 事件为 <code>passive</code></p>"
             }
           }
         }
@@ -203,6 +230,7 @@
     "renderer": {
       "type": "string",
       "enum": ["webview", "skyline"],
+      "default": "webview",
       "description": "渲染后端",
       "markdownDescription": "渲染后端\n\n**支持最低版本**：\n\n- 基础库：2.30.4",
       "x-intellij-html-description": "<p>渲染后端</p><p><b>支持最低版本</b>：</p><ul><li>基础库：2.30.4</li></ul>",
@@ -218,22 +246,45 @@
       "properties": {
         "skyline": {
           "type": "object",
+          "description": "Skyline 渲染引擎相关配置",
+          "markdownDescription": "`Skyline` 渲染引擎相关配置",
+          "x-intellij-html-description": "<p><code>Skyline</code> 渲染引擎相关配置</p>",
           "additionalProperties": false,
           "properties": {
             "defaultDisplayBlock": {
-              "type": "boolean"
+              "type": "boolean",
+              "default": false,
+              "description": "开启默认 Block 布局",
+              "markdownDescription": "开启默认 `Block` 布局",
+              "x-intellij-html-description": "<p>开启默认 <code>Block</code> 布局</p>"
             },
             "defaultContentBox": {
-              "type": "boolean"
+              "type": "boolean",
+              "default": false,
+              "description": "开启默认 ContentBox 盒模型",
+              "markdownDescription": "开启默认 `ContentBox` 盒模型",
+              "x-intellij-html-description": "<p>开启默认 <code>ContentBox</code> 盒模型</p>"
             },
             "disableABTest": {
-              "type": "boolean"
+              "type": "boolean",
+              "default": false,
+              "description": "关闭 Skyline AB 实验",
+              "markdownDescription": "关闭 `Skyline` AB 实验",
+              "x-intellij-html-description": "<p>关闭 <code>Skyline</code> AB 实验</p>"
             },
             "enableScrollViewAutoSize": {
-              "type": "boolean"
+              "type": "boolean",
+              "default": false,
+              "description": "开启 scroll-view 自动撑开",
+              "markdownDescription": "开启 `scroll-view` 自动撑开",
+              "x-intellij-html-description": "<p>开启 <code>scroll-view</code> 自动撑开</p>"
             },
             "tagNameStyleIsolation": {
-              "type": "string"
+              "type": "string",
+              "default": "isolated",
+              "description": "开启 tag 选择器全局匹配",
+              "markdownDescription": "开启 `tag` 选择器全局匹配",
+              "x-intellij-html-description": "<p>开启 <code>tag</code> 选择器全局匹配</p>"
             }
           }
         }
@@ -242,6 +293,7 @@
     "componentFramework": {
       "type": "string",
       "enum": ["exparser", "glass-easel"],
+      "default": "exparser",
       "description": "组件框架",
       "markdownDescription": "组件框架\n\n**支持最低版本**：\n\n- 基础库：2.30.4",
       "x-intellij-html-description": "<p>组件框架</p><p><b>支持最低版本</b>：</p><ul><li>基础库：2.30.4</li></ul>",

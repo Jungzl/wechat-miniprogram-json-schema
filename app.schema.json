@@ -33,6 +33,7 @@
       "properties": {
         "navigationBarBackgroundColor": {
           "type": "string",
+          "default": "#000000",
           "description": "导航栏背景颜色",
           "markdownDescription": "导航栏背景颜色",
           "x-intellij-html-description": "<p>导航栏背景颜色</p>"
@@ -48,6 +49,7 @@
               "pattern": "^@"
             }
           ],
+          "default": "white",
           "description": "导航栏标题颜色，仅支持 black / white",
           "markdownDescription": "导航栏标题颜色，仅支持 `black` / `white`",
           "x-intellij-html-description": "<p>导航栏标题颜色，仅支持 <code>black</code> / <code>white</code></p>"
@@ -62,24 +64,28 @@
           "type": "string",
           "enum": ["default", "custom"],
           "markdownEnumDescriptions": ["默认样式", "自定义导航栏，只保留右上角胶囊按钮"],
+          "default": "default",
           "description": "导航栏样式",
           "markdownDescription": "导航栏样式\n\n- `default`：默认样式\n- `custom`：自定义导航栏，只保留右上角胶囊按钮",
           "x-intellij-html-description": "<p>导航栏样式</p><ul><li><code>default</code>：默认样式</li><li><code>custom</code>：自定义导航栏，只保留右上角胶囊按钮</li></ul>"
         },
         "backgroundColor": {
           "type": "string",
+          "default": "#ffffff",
           "description": "窗口背景色",
           "markdownDescription": "窗口背景色",
           "x-intellij-html-description": "<p>窗口背景色</p>"
         },
         "backgroundColorTop": {
           "type": "string",
+          "default": "#ffffff",
           "description": "顶部窗口背景色，仅 iOS 支持",
           "markdownDescription": "顶部窗口背景色，仅 iOS 支持",
           "x-intellij-html-description": "<p>顶部窗口背景色，仅 iOS 支持</p>"
         },
         "backgroundColorBottom": {
           "type": "string",
+          "default": "#ffffff",
           "description": "底部窗口背景色，仅 iOS 支持",
           "markdownDescription": "底部窗口背景色，仅 iOS 支持",
           "x-intellij-html-description": "<p>底部窗口背景色，仅 iOS 支持</p>"
@@ -95,18 +101,21 @@
               "pattern": "^@"
             }
           ],
+          "default": "dark",
           "description": "下拉 loading 样式，仅支持 dark / light",
           "markdownDescription": "下拉 loading 样式，仅支持 `dark` / `light`",
           "x-intellij-html-description": "<p>下拉 loading 样式，仅支持 <code>dark</code> / <code>light</code></p>"
         },
         "enablePullDownRefresh": {
           "type": "boolean",
+          "default": false,
           "description": "是否开启下拉刷新",
           "markdownDescription": "是否开启下拉刷新",
           "x-intellij-html-description": "<p>是否开启下拉刷新</p>"
         },
         "onReachBottomDistance": {
           "type": "number",
+          "default": 50,
           "description": "页面上拉触底事件触发时距页面底部距离，单位 px",
           "markdownDescription": "页面上拉触底事件触发时距页面底部距离，单位 `px`",
           "x-intellij-html-description": "<p>页面上拉触底事件触发时距页面底部距离，单位 <code>px</code></p>"
@@ -114,6 +123,7 @@
         "pageOrientation": {
           "type": "string",
           "enum": ["portrait", "landscape", "auto"],
+          "default": "portrait",
           "description": "屏幕旋转设置",
           "markdownDescription": "屏幕旋转设置",
           "x-intellij-html-description": "<p>屏幕旋转设置</p>"
@@ -122,6 +132,7 @@
           "type": "string",
           "enum": ["homePage", "homePageAndLatestPage"],
           "markdownEnumDescriptions": ["（默认值）如果从这个页面退出小程序，下次将从首页冷启动", "如果从这个页面退出小程序，下次冷启动后立刻加载这个页面，页面的参数保持不变（不可用于 tab 页）"],
+          "default": "homePage",
           "description": "冷启动时页面恢复策略",
           "markdownDescription": "冷启动时页面恢复策略\n\n- `homePage`：（默认值）如果从这个页面退出小程序，下次将从首页冷启动\n- `homePageAndLatestPage`：如果从这个页面退出小程序，下次冷启动后立刻加载这个页面，页面的参数保持不变（不可用于 tab 页）\n\n详见官方文档：[restartStrategy](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#restartStrategy)",
           "x-intellij-html-description": "<p>冷启动时页面恢复策略</p><ul><li><code>homePage</code>：（默认值）如果从这个页面退出小程序，下次将从首页冷启动</li><li><code>homePageAndLatestPage</code>：如果从这个页面退出小程序，下次冷启动后立刻加载这个页面，页面的参数保持不变（不可用于 tab 页）</li></ul><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#restartStrategy\">restartStrategy</a></p>"
@@ -136,6 +147,7 @@
         "handleWebviewPreload": {
           "type": "string",
           "enum": ["static", "manual", "auto"],
+          "default": "static",
           "description": "WebView 预加载控制",
           "markdownDescription": "WebView 预加载控制",
           "x-intellij-html-description": "<p>WebView 预加载控制</p>"
@@ -143,12 +155,14 @@
         "visualEffectInBackground": {
           "type": "string",
           "enum": ["none", "hidden"],
+          "default": "none",
           "description": "小程序切后台后界面视觉表现",
           "markdownDescription": "小程序切后台后界面视觉表现",
           "x-intellij-html-description": "<p>小程序切后台后界面视觉表现</p>"
         },
         "homeButton": {
           "type": "boolean",
+          "default": false,
           "description": "是否在左上角显示 home 按钮",
           "markdownDescription": "是否在左上角显示 `home` 按钮",
           "x-intellij-html-description": "<p>是否在左上角显示 <code>home</code> 按钮</p>"
@@ -192,6 +206,7 @@
               "pattern": "^@"
             }
           ],
+          "default": "black",
           "description": "tabBar 上边框颜色",
           "markdownDescription": "`tabBar` 上边框颜色",
           "x-intellij-html-description": "<p><code>tabBar</code> 上边框颜色</p>"
@@ -199,12 +214,14 @@
         "position": {
           "type": "string",
           "enum": ["bottom", "top"],
+          "default": "bottom",
           "description": "tabBar 位置",
           "markdownDescription": "`tabBar` 位置",
           "x-intellij-html-description": "<p><code>tabBar</code> 位置</p>"
         },
         "custom": {
           "type": "boolean",
+          "default": false,
           "description": "是否自定义 tabBar",
           "markdownDescription": "是否自定义 `tabBar`",
           "x-intellij-html-description": "<p>是否自定义 <code>tabBar</code></p>"
@@ -260,33 +277,47 @@
         "request": {
           "type": "integer",
           "minimum": 0,
-          "default": 60000
+          "default": 60000,
+          "description": "wx.request 的超时时间，单位：毫秒",
+          "markdownDescription": "`wx.request` 的超时时间，单位：毫秒",
+          "x-intellij-html-description": "<p><code>wx.request</code> 的超时时间，单位：毫秒</p>"
         },
         "connectSocket": {
           "type": "integer",
           "minimum": 0,
-          "default": 60000
+          "default": 60000,
+          "description": "wx.connectSocket 的超时时间，单位：毫秒",
+          "markdownDescription": "`wx.connectSocket` 的超时时间，单位：毫秒",
+          "x-intellij-html-description": "<p><code>wx.connectSocket</code> 的超时时间，单位：毫秒</p>"
         },
         "uploadFile": {
           "type": "integer",
           "minimum": 0,
-          "default": 60000
+          "default": 60000,
+          "description": "wx.uploadFile 的超时时间，单位：毫秒",
+          "markdownDescription": "`wx.uploadFile` 的超时时间，单位：毫秒",
+          "x-intellij-html-description": "<p><code>wx.uploadFile</code> 的超时时间，单位：毫秒</p>"
         },
         "downloadFile": {
           "type": "integer",
           "minimum": 0,
-          "default": 60000
+          "default": 60000,
+          "description": "wx.downloadFile 的超时时间，单位：毫秒",
+          "markdownDescription": "`wx.downloadFile` 的超时时间，单位：毫秒",
+          "x-intellij-html-description": "<p><code>wx.downloadFile</code> 的超时时间，单位：毫秒</p>"
         }
       }
     },
     "debug": {
       "type": "boolean",
+      "default": false,
       "description": "是否开启 debug 模式",
       "markdownDescription": "是否开启 `debug` 模式\n\n详见官方文档：[debug](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#debug)",
       "x-intellij-html-description": "<p>是否开启 <code>debug</code> 模式</p><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#debug\">debug</a></p>"
     },
     "functionalPages": {
       "type": "boolean",
+      "default": false,
       "description": "是否启用插件功能页",
       "markdownDescription": "是否启用插件功能页\n\n**支持最低版本**：\n\n- 基础库：2.1.0\n\n详见官方文档：[functionalPages](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#functionalPages)",
       "x-intellij-html-description": "<p>是否启用插件功能页</p><p><b>支持最低版本</b>：</p><ul><li>基础库：2.1.0</li></ul><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#functionalPages\">functionalPages</a></p>",
@@ -380,39 +411,39 @@
     "preloadRule": {
       "type": "object",
       "description": "分包预下载规则",
-      "markdownDescription": "分包预下载规则\n\n详见官方文档：[preloadRule](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#preloadRule)",
-      "x-intellij-html-description": "<p>分包预下载规则</p><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#preloadRule\">preloadRule</a></p>",
+      "markdownDescription": "分包预下载规则\n\n**支持最低版本**：\n\n- 基础库：2.3.0\n- 开发者工具：1.02.1808300\n\n详见官方文档：[preloadRule](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#preloadRule)",
+      "x-intellij-html-description": "<p>分包预下载规则</p><p><b>支持最低版本</b>：</p><ul><li>基础库：2.3.0</li><li>开发者工具：1.02.1808300</li></ul><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#preloadRule\">preloadRule</a></p>",
+      "x-wechat-min-version": "2.3.0",
+      "x-wechat-devtools-min-version": "1.02.1808300",
       "additionalProperties": {
         "type": "object",
         "additionalProperties": false,
+        "required": ["packages"],
         "properties": {
           "network": {
             "type": "string",
             "enum": ["all", "wifi"],
-            "description": "触发预下载的网络模式",
-            "markdownDescription": "触发预下载的网络模式",
-            "x-intellij-html-description": "<p>触发预下载的网络模式</p>"
+            "default": "wifi",
+            "markdownEnumDescriptions": ["不限网络", "仅 wifi 下预下载"],
+            "description": "在指定网络下预下载",
+            "markdownDescription": "在指定网络下预下载\n\n- `all`：不限网络\n- `wifi`：仅 wifi 下预下载（默认值）",
+            "x-intellij-html-description": "<p>在指定网络下预下载</p><ul><li><code>all</code>：不限网络</li><li><code>wifi</code>：仅 wifi 下预下载（默认值）</li></ul>"
           },
           "packages": {
             "type": "array",
             "items": {
               "type": "string"
             },
-            "description": "预下载分包列表",
-            "markdownDescription": "预下载分包列表",
-            "x-intellij-html-description": "<p>预下载分包列表</p>"
-          },
-          "disable": {
-            "type": "boolean",
-            "description": "是否禁用当前页面的预下载",
-            "markdownDescription": "是否禁用当前页面的预下载",
-            "x-intellij-html-description": "<p>是否禁用当前页面的预下载</p>"
+            "description": "进入页面后预下载分包的 root 或 name",
+            "markdownDescription": "进入页面后预下载分包的 `root` 或 `name`，`__APP__` 表示主包",
+            "x-intellij-html-description": "<p>进入页面后预下载分包的 <code>root</code> 或 <code>name</code>，<code>__APP__</code> 表示主包</p>"
           }
         }
       }
     },
     "resizable": {
       "type": "boolean",
+      "default": false,
       "description": "PC 小程序是否支持用户改变窗口大小，iPad 小程序是否支持旋转",
       "markdownDescription": "PC 小程序是否支持用户改变窗口大小，iPad 小程序是否支持旋转\n\n**支持最低版本**：\n\n- 基础库：2.3.0\n\n详见官方文档：[resizable](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#resizable)",
       "x-intellij-html-description": "<p>PC 小程序是否支持用户改变窗口大小，iPad 小程序是否支持旋转</p><p><b>支持最低版本</b>：</p><ul><li>基础库：2.3.0</li></ul><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#resizable\">resizable</a></p>",
@@ -533,6 +564,20 @@
         }
       }
     },
+    "supportedMaterials": {
+      "type": "object",
+      "description": "聊天素材小程序打开相关配置",
+      "markdownDescription": "聊天素材小程序打开相关配置\n\n**支持最低版本**：\n\n- 基础库：2.14.3",
+      "x-intellij-html-description": "<p>聊天素材小程序打开相关配置</p><p><b>支持最低版本</b>：</p><ul><li>基础库：2.14.3</li></ul>",
+      "x-wechat-min-version": "2.14.3",
+      "additionalProperties": true
+    },
+    "serviceProviderTicket": {
+      "type": "string",
+      "description": "定制化型服务商票据",
+      "markdownDescription": "定制化型服务商票据",
+      "x-intellij-html-description": "<p>定制化型服务商票据</p>"
+    },
     "embeddedAppIdList": {
       "type": "array",
       "description": "允许通过 wx.openEmbeddedMiniProgram 打开的小程序 appId 列表",
@@ -567,6 +612,7 @@
       "properties": {
         "enableFPSPanel": {
           "type": "boolean",
+          "default": false,
           "description": "是否启用 FPS 面板",
           "markdownDescription": "是否启用 `FPS` 面板",
           "x-intellij-html-description": "<p>是否启用 <code>FPS</code> 面板</p>"
@@ -587,13 +633,25 @@
           "additionalProperties": false,
           "properties": {
             "touchstart": {
-              "type": "boolean"
+              "type": "boolean",
+              "default": false,
+              "description": "是否设置 touchstart 事件为 passive",
+              "markdownDescription": "是否设置 `touchstart` 事件为 `passive`",
+              "x-intellij-html-description": "<p>是否设置 <code>touchstart</code> 事件为 <code>passive</code></p>"
             },
             "touchmove": {
-              "type": "boolean"
+              "type": "boolean",
+              "default": false,
+              "description": "是否设置 touchmove 事件为 passive",
+              "markdownDescription": "是否设置 `touchmove` 事件为 `passive`",
+              "x-intellij-html-description": "<p>是否设置 <code>touchmove</code> 事件为 <code>passive</code></p>"
             },
             "wheel": {
-              "type": "boolean"
+              "type": "boolean",
+              "default": false,
+              "description": "是否设置 wheel 事件为 passive",
+              "markdownDescription": "是否设置 `wheel` 事件为 `passive`",
+              "x-intellij-html-description": "<p>是否设置 <code>wheel</code> 事件为 <code>passive</code></p>"
             }
           }
         }
@@ -616,6 +674,7 @@
     "renderer": {
       "type": "string",
       "enum": ["webview", "skyline"],
+      "default": "webview",
       "description": "全局默认渲染后端",
       "markdownDescription": "全局默认渲染后端\n\n详见官方文档：[renderer](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#renderer)",
       "x-intellij-html-description": "<p>全局默认渲染后端</p><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#renderer\">renderer</a></p>"
@@ -629,22 +688,45 @@
       "properties": {
         "skyline": {
           "type": "object",
+          "description": "Skyline 渲染引擎相关配置",
+          "markdownDescription": "`Skyline` 渲染引擎相关配置",
+          "x-intellij-html-description": "<p><code>Skyline</code> 渲染引擎相关配置</p>",
           "additionalProperties": false,
           "properties": {
             "defaultDisplayBlock": {
-              "type": "boolean"
+              "type": "boolean",
+              "default": false,
+              "description": "开启默认 Block 布局",
+              "markdownDescription": "开启默认 `Block` 布局",
+              "x-intellij-html-description": "<p>开启默认 <code>Block</code> 布局</p>"
             },
             "defaultContentBox": {
-              "type": "boolean"
+              "type": "boolean",
+              "default": false,
+              "description": "开启默认 ContentBox 盒模型",
+              "markdownDescription": "开启默认 `ContentBox` 盒模型",
+              "x-intellij-html-description": "<p>开启默认 <code>ContentBox</code> 盒模型</p>"
             },
             "disableABTest": {
-              "type": "boolean"
+              "type": "boolean",
+              "default": false,
+              "description": "关闭 Skyline AB 实验",
+              "markdownDescription": "关闭 `Skyline` AB 实验",
+              "x-intellij-html-description": "<p>关闭 <code>Skyline</code> AB 实验</p>"
             },
             "enableScrollViewAutoSize": {
-              "type": "boolean"
+              "type": "boolean",
+              "default": false,
+              "description": "开启 scroll-view 自动撑开",
+              "markdownDescription": "开启 `scroll-view` 自动撑开",
+              "x-intellij-html-description": "<p>开启 <code>scroll-view</code> 自动撑开</p>"
             },
             "tagNameStyleIsolation": {
-              "type": "string"
+              "type": "string",
+              "default": "isolated",
+              "description": "开启 tag 选择器全局匹配",
+              "markdownDescription": "开启 `tag` 选择器全局匹配",
+              "x-intellij-html-description": "<p>开启 <code>tag</code> 选择器全局匹配</p>"
             }
           }
         }
@@ -653,9 +735,31 @@
     "componentFramework": {
       "type": "string",
       "enum": ["exparser", "glass-easel"],
+      "default": "exparser",
       "description": "小程序组件框架",
       "markdownDescription": "小程序组件框架\n\n详见官方文档：[componentFramework](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#componentFramework)",
       "x-intellij-html-description": "<p>小程序组件框架</p><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#componentFramework\">componentFramework</a></p>"
+    },
+    "miniApp": {
+      "type": "object",
+      "description": "多端模式场景接入身份管理服务时开启小程序授权页相关配置",
+      "markdownDescription": "多端模式场景接入身份管理服务时开启小程序授权页相关配置\n\n详见相关文档",
+      "x-intellij-html-description": "<p>多端模式场景接入身份管理服务时开启小程序授权页相关配置</p><p>详见相关文档</p>",
+      "additionalProperties": true
+    },
+    "static": {
+      "type": "object",
+      "description": "正常情况下默认所有资源文件都被打包发布到所有平台，可以通过 static 字段配置特定每个目录/文件只能发布到特定的平台（多端场景）",
+      "markdownDescription": "正常情况下默认所有资源文件都被打包发布到所有平台，可以通过 `static` 字段配置特定每个目录/文件只能发布到特定的平台（多端场景）\n\n详见相关文档",
+      "x-intellij-html-description": "<p>正常情况下默认所有资源文件都被打包发布到所有平台，可以通过 <code>static</code> 字段配置特定每个目录/文件只能发布到特定的平台（多端场景）</p><p>详见相关文档</p>",
+      "additionalProperties": true
+    },
+    "convertRpxToVw": {
+      "type": "boolean",
+      "description": "是否将 rpx 单位转换为 vw 单位，开启后能修复某些 rpx 下的精度问题",
+      "markdownDescription": "是否将 `rpx` 单位转换为 `vw` 单位，开启后能修复某些 `rpx` 下的精度问题\n\n**支持最低版本**：\n\n- 基础库：3.3.0",
+      "x-intellij-html-description": "<p>是否将 <code>rpx</code> 单位转换为 <code>vw</code> 单位，开启后能修复某些 <code>rpx</code> 下的精度问题</p><p><b>支持最低版本</b>：</p><ul><li>基础库：3.3.0</li></ul>",
+      "x-wechat-min-version": "3.3.0"
     },
     "chatTools": {
       "type": "object",
@@ -666,16 +770,28 @@
       "required": ["root", "entryPagePath", "desc"],
       "properties": {
         "root": {
-          "type": "string"
+          "type": "string",
+          "description": "分包根目录",
+          "markdownDescription": "分包根目录",
+          "x-intellij-html-description": "<p>分包根目录</p>"
         },
         "entryPagePath": {
-          "type": "string"
+          "type": "string",
+          "description": "聊天工具启动路径",
+          "markdownDescription": "聊天工具启动路径",
+          "x-intellij-html-description": "<p>聊天工具启动路径</p>"
         },
         "desc": {
-          "type": "string"
+          "type": "string",
+          "description": "聊天工具描述",
+          "markdownDescription": "聊天工具描述",
+          "x-intellij-html-description": "<p>聊天工具描述</p>"
         },
         "scopes": {
           "type": "array",
+          "description": "分包中会使用的 scope 权限",
+          "markdownDescription": "分包中会使用的 `scope` 权限",
+          "x-intellij-html-description": "<p>分包中会使用的 <code>scope</code> 权限</p>",
           "items": {
             "type": "string"
           }
@@ -754,15 +870,15 @@
         },
         "name": {
           "type": "string",
-          "description": "分包别名",
-          "markdownDescription": "分包别名",
-          "x-intellij-html-description": "<p>分包别名</p>"
+          "description": "分包别名，分包预下载时可以使用",
+          "markdownDescription": "分包别名，分包预下载时可以使用",
+          "x-intellij-html-description": "<p>分包别名，分包预下载时可以使用</p>"
         },
         "pages": {
           "type": "array",
-          "description": "分包内页面路径列表",
-          "markdownDescription": "分包内页面路径列表",
-          "x-intellij-html-description": "<p>分包内页面路径列表</p>",
+          "description": "分包页面路径，相对于分包根目录",
+          "markdownDescription": "分包页面路径，相对于分包根目录",
+          "x-intellij-html-description": "<p>分包页面路径，相对于分包根目录</p>",
           "minItems": 1,
           "items": {
             "type": "string"
@@ -773,6 +889,12 @@
           "description": "是否独立分包",
           "markdownDescription": "是否独立分包",
           "x-intellij-html-description": "<p>是否独立分包</p>"
+        },
+        "entry": {
+          "type": "string",
+          "description": "分包入口文件，路径相对于分包根目录",
+          "markdownDescription": "分包入口文件，路径相对于分包根目录\n\n该文件会在分包注入时首先被执行。\n\n**调试支持**：\n\n- 开发者工具：1.06.2406242 及以上（正式环境无版本需求）",
+          "x-intellij-html-description": "<p>分包入口文件，路径相对于分包根目录</p><p>该文件会在分包注入时首先被执行。</p><p><b>调试支持</b>：</p><ul><li>开发者工具：1.06.2406242 及以上（正式环境无版本需求）</li></ul>"
         }
       }
     },
