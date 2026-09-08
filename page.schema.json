@@ -229,6 +229,9 @@
             "disableABTest": {
               "type": "boolean"
             },
+            "enableScrollViewAutoSize": {
+              "type": "boolean"
+            },
             "tagNameStyleIsolation": {
               "type": "string"
             }
