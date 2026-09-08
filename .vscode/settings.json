@@ -1,11 +1,11 @@
 {
   "json.schemas": [
     {
-      "fileMatch": ["app.demo.json"],
+      "fileMatch": ["demo/app.json"],
       "url": "./app.schema.json"
     },
     {
-      "fileMatch": ["page.demo.json"],
+      "fileMatch": ["demo/page.json"],
       "url": "./page.schema.json"
     }
   ]
