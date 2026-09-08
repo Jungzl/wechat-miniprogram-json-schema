@@ -34,9 +34,9 @@
         "navigationBarBackgroundColor": {
           "type": "string",
           "default": "#000000",
-          "description": "导航栏背景颜色",
-          "markdownDescription": "导航栏背景颜色",
-          "x-intellij-html-description": "<p>导航栏背景颜色</p>"
+          "description": "导航栏背景颜色（默认值：#000000）",
+          "markdownDescription": "导航栏背景颜色\n\n**默认值**：`#000000`",
+          "x-intellij-html-description": "<p>导航栏背景颜色</p><p><b>默认值</b>：<code>#000000</code></p>"
         },
         "navigationBarTextStyle": {
           "oneOf": [
@@ -50,9 +50,9 @@
             }
           ],
           "default": "white",
-          "description": "导航栏标题颜色，仅支持 black / white",
-          "markdownDescription": "导航栏标题颜色，仅支持 `black` / `white`",
-          "x-intellij-html-description": "<p>导航栏标题颜色，仅支持 <code>black</code> / <code>white</code></p>"
+          "description": "导航栏标题颜色，仅支持 black / white（默认值：white）",
+          "markdownDescription": "导航栏标题颜色，仅支持 `black` / `white`\n\n**默认值**：`white`",
+          "x-intellij-html-description": "<p>导航栏标题颜色，仅支持 <code>black</code> / <code>white</code></p><p><b>默认值</b>：<code>white</code></p>"
         },
         "navigationBarTitleText": {
           "type": "string",
@@ -65,30 +65,30 @@
           "enum": ["default", "custom"],
           "markdownEnumDescriptions": ["默认样式", "自定义导航栏，只保留右上角胶囊按钮"],
           "default": "default",
-          "description": "导航栏样式",
-          "markdownDescription": "导航栏样式\n\n- `default`：默认样式\n- `custom`：自定义导航栏，只保留右上角胶囊按钮",
-          "x-intellij-html-description": "<p>导航栏样式</p><ul><li><code>default</code>：默认样式</li><li><code>custom</code>：自定义导航栏，只保留右上角胶囊按钮</li></ul>"
+          "description": "导航栏样式（默认值：default）",
+          "markdownDescription": "导航栏样式\n\n- `default`：默认样式\n- `custom`：自定义导航栏，只保留右上角胶囊按钮\n\n**默认值**：`default`",
+          "x-intellij-html-description": "<p>导航栏样式</p><ul><li><code>default</code>：默认样式</li><li><code>custom</code>：自定义导航栏，只保留右上角胶囊按钮</li></ul><p><b>默认值</b>：<code>default</code></p>"
         },
         "backgroundColor": {
           "type": "string",
           "default": "#ffffff",
-          "description": "窗口背景色",
-          "markdownDescription": "窗口背景色",
-          "x-intellij-html-description": "<p>窗口背景色</p>"
+          "description": "窗口背景色（默认值：#ffffff）",
+          "markdownDescription": "窗口背景色\n\n**默认值**：`#ffffff`",
+          "x-intellij-html-description": "<p>窗口背景色</p><p><b>默认值</b>：<code>#ffffff</code></p>"
         },
         "backgroundColorTop": {
           "type": "string",
           "default": "#ffffff",
-          "description": "顶部窗口背景色，仅 iOS 支持",
-          "markdownDescription": "顶部窗口背景色，仅 iOS 支持",
-          "x-intellij-html-description": "<p>顶部窗口背景色，仅 iOS 支持</p>"
+          "description": "顶部窗口背景色，仅 iOS 支持（默认值：#ffffff）",
+          "markdownDescription": "顶部窗口背景色，仅 iOS 支持\n\n**默认值**：`#ffffff`",
+          "x-intellij-html-description": "<p>顶部窗口背景色，仅 iOS 支持</p><p><b>默认值</b>：<code>#ffffff</code></p>"
         },
         "backgroundColorBottom": {
           "type": "string",
           "default": "#ffffff",
-          "description": "底部窗口背景色，仅 iOS 支持",
-          "markdownDescription": "底部窗口背景色，仅 iOS 支持",
-          "x-intellij-html-description": "<p>底部窗口背景色，仅 iOS 支持</p>"
+          "description": "底部窗口背景色，仅 iOS 支持（默认值：#ffffff）",
+          "markdownDescription": "底部窗口背景色，仅 iOS 支持\n\n**默认值**：`#ffffff`",
+          "x-intellij-html-description": "<p>底部窗口背景色，仅 iOS 支持</p><p><b>默认值</b>：<code>#ffffff</code></p>"
         },
         "backgroundTextStyle": {
           "oneOf": [
@@ -102,40 +102,40 @@
             }
           ],
           "default": "dark",
-          "description": "下拉 loading 样式，仅支持 dark / light",
-          "markdownDescription": "下拉 loading 样式，仅支持 `dark` / `light`",
-          "x-intellij-html-description": "<p>下拉 loading 样式，仅支持 <code>dark</code> / <code>light</code></p>"
+          "description": "下拉 loading 样式，仅支持 dark / light（默认值：dark）",
+          "markdownDescription": "下拉 loading 样式，仅支持 `dark` / `light`\n\n**默认值**：`dark`",
+          "x-intellij-html-description": "<p>下拉 loading 样式，仅支持 <code>dark</code> / <code>light</code></p><p><b>默认值</b>：<code>dark</code></p>"
         },
         "enablePullDownRefresh": {
           "type": "boolean",
           "default": false,
-          "description": "是否开启下拉刷新",
-          "markdownDescription": "是否开启下拉刷新",
-          "x-intellij-html-description": "<p>是否开启下拉刷新</p>"
+          "description": "是否开启下拉刷新（默认值：false）",
+          "markdownDescription": "是否开启下拉刷新\n\n**默认值**：`false`",
+          "x-intellij-html-description": "<p>是否开启下拉刷新</p><p><b>默认值</b>：<code>false</code></p>"
         },
         "onReachBottomDistance": {
           "type": "number",
           "default": 50,
-          "description": "页面上拉触底事件触发时距页面底部距离，单位 px",
-          "markdownDescription": "页面上拉触底事件触发时距页面底部距离，单位 `px`",
-          "x-intellij-html-description": "<p>页面上拉触底事件触发时距页面底部距离，单位 <code>px</code></p>"
+          "description": "页面上拉触底事件触发时距页面底部距离，单位 px（默认值：50）",
+          "markdownDescription": "页面上拉触底事件触发时距页面底部距离，单位 `px`\n\n**默认值**：`50`",
+          "x-intellij-html-description": "<p>页面上拉触底事件触发时距页面底部距离，单位 <code>px</code></p><p><b>默认值</b>：<code>50</code></p>"
         },
         "pageOrientation": {
           "type": "string",
           "enum": ["portrait", "landscape", "auto"],
           "default": "portrait",
-          "description": "屏幕旋转设置",
-          "markdownDescription": "屏幕旋转设置",
-          "x-intellij-html-description": "<p>屏幕旋转设置</p>"
+          "description": "屏幕旋转设置（默认值：portrait）",
+          "markdownDescription": "屏幕旋转设置\n\n**默认值**：`portrait`",
+          "x-intellij-html-description": "<p>屏幕旋转设置</p><p><b>默认值</b>：<code>portrait</code></p>"
         },
         "restartStrategy": {
           "type": "string",
           "enum": ["homePage", "homePageAndLatestPage"],
           "markdownEnumDescriptions": ["（默认值）如果从这个页面退出小程序，下次将从首页冷启动", "如果从这个页面退出小程序，下次冷启动后立刻加载这个页面，页面的参数保持不变（不可用于 tab 页）"],
           "default": "homePage",
-          "description": "冷启动时页面恢复策略",
-          "markdownDescription": "冷启动时页面恢复策略\n\n- `homePage`：（默认值）如果从这个页面退出小程序，下次将从首页冷启动\n- `homePageAndLatestPage`：如果从这个页面退出小程序，下次冷启动后立刻加载这个页面，页面的参数保持不变（不可用于 tab 页）\n\n详见官方文档：[restartStrategy](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#restartStrategy)",
-          "x-intellij-html-description": "<p>冷启动时页面恢复策略</p><ul><li><code>homePage</code>：（默认值）如果从这个页面退出小程序，下次将从首页冷启动</li><li><code>homePageAndLatestPage</code>：如果从这个页面退出小程序，下次冷启动后立刻加载这个页面，页面的参数保持不变（不可用于 tab 页）</li></ul><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#restartStrategy\">restartStrategy</a></p>"
+          "description": "冷启动时页面恢复策略（默认值：homePage）",
+          "markdownDescription": "冷启动时页面恢复策略\n\n- `homePage`：（默认值）如果从这个页面退出小程序，下次将从首页冷启动\n- `homePageAndLatestPage`：如果从这个页面退出小程序，下次冷启动后立刻加载这个页面，页面的参数保持不变（不可用于 tab 页）\n\n详见官方文档：[restartStrategy](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#restartStrategy)\n\n**默认值**：`homePage`",
+          "x-intellij-html-description": "<p>冷启动时页面恢复策略</p><ul><li><code>homePage</code>：（默认值）如果从这个页面退出小程序，下次将从首页冷启动</li><li><code>homePageAndLatestPage</code>：如果从这个页面退出小程序，下次冷启动后立刻加载这个页面，页面的参数保持不变（不可用于 tab 页）</li></ul><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#restartStrategy\">restartStrategy</a></p><p><b>默认值</b>：<code>homePage</code></p>"
         },
         "initialRenderingCache": {
           "type": "string",
@@ -148,24 +148,24 @@
           "type": "string",
           "enum": ["static", "manual", "auto"],
           "default": "static",
-          "description": "WebView 预加载控制",
-          "markdownDescription": "WebView 预加载控制",
-          "x-intellij-html-description": "<p>WebView 预加载控制</p>"
+          "description": "WebView 预加载控制（默认值：static）",
+          "markdownDescription": "WebView 预加载控制\n\n**默认值**：`static`",
+          "x-intellij-html-description": "<p>WebView 预加载控制</p><p><b>默认值</b>：<code>static</code></p>"
         },
         "visualEffectInBackground": {
           "type": "string",
           "enum": ["none", "hidden"],
           "default": "none",
-          "description": "小程序切后台后界面视觉表现",
-          "markdownDescription": "小程序切后台后界面视觉表现",
-          "x-intellij-html-description": "<p>小程序切后台后界面视觉表现</p>"
+          "description": "小程序切后台后界面视觉表现（默认值：none）",
+          "markdownDescription": "小程序切后台后界面视觉表现\n\n**默认值**：`none`",
+          "x-intellij-html-description": "<p>小程序切后台后界面视觉表现</p><p><b>默认值</b>：<code>none</code></p>"
         },
         "homeButton": {
           "type": "boolean",
           "default": false,
-          "description": "是否在左上角显示 home 按钮",
-          "markdownDescription": "是否在左上角显示 `home` 按钮",
-          "x-intellij-html-description": "<p>是否在左上角显示 <code>home</code> 按钮</p>"
+          "description": "是否在左上角显示 home 按钮（默认值：false）",
+          "markdownDescription": "是否在左上角显示 `home` 按钮\n\n**默认值**：`false`",
+          "x-intellij-html-description": "<p>是否在左上角显示 <code>home</code> 按钮</p><p><b>默认值</b>：<code>false</code></p>"
         }
       }
     },
@@ -207,24 +207,24 @@
             }
           ],
           "default": "black",
-          "description": "tabBar 上边框颜色",
-          "markdownDescription": "`tabBar` 上边框颜色",
-          "x-intellij-html-description": "<p><code>tabBar</code> 上边框颜色</p>"
+          "description": "tabBar 上边框颜色（默认值：black）",
+          "markdownDescription": "`tabBar` 上边框颜色\n\n**默认值**：`black`",
+          "x-intellij-html-description": "<p><code>tabBar</code> 上边框颜色</p><p><b>默认值</b>：<code>black</code></p>"
         },
         "position": {
           "type": "string",
           "enum": ["bottom", "top"],
           "default": "bottom",
-          "description": "tabBar 位置",
-          "markdownDescription": "`tabBar` 位置",
-          "x-intellij-html-description": "<p><code>tabBar</code> 位置</p>"
+          "description": "tabBar 位置（默认值：bottom）",
+          "markdownDescription": "`tabBar` 位置\n\n**默认值**：`bottom`",
+          "x-intellij-html-description": "<p><code>tabBar</code> 位置</p><p><b>默认值</b>：<code>bottom</code></p>"
         },
         "custom": {
           "type": "boolean",
           "default": false,
-          "description": "是否自定义 tabBar",
-          "markdownDescription": "是否自定义 `tabBar`",
-          "x-intellij-html-description": "<p>是否自定义 <code>tabBar</code></p>"
+          "description": "是否自定义 tabBar（默认值：false）",
+          "markdownDescription": "是否自定义 `tabBar`\n\n**默认值**：`false`",
+          "x-intellij-html-description": "<p>是否自定义 <code>tabBar</code></p><p><b>默认值</b>：<code>false</code></p>"
         },
         "list": {
           "type": "array",
@@ -278,49 +278,49 @@
           "type": "integer",
           "minimum": 0,
           "default": 60000,
-          "description": "wx.request 的超时时间，单位：毫秒",
-          "markdownDescription": "`wx.request` 的超时时间，单位：毫秒",
-          "x-intellij-html-description": "<p><code>wx.request</code> 的超时时间，单位：毫秒</p>"
+          "description": "wx.request 的超时时间，单位：毫秒（默认值：60000）",
+          "markdownDescription": "`wx.request` 的超时时间，单位：毫秒\n\n**默认值**：`60000`",
+          "x-intellij-html-description": "<p><code>wx.request</code> 的超时时间，单位：毫秒</p><p><b>默认值</b>：<code>60000</code></p>"
         },
         "connectSocket": {
           "type": "integer",
           "minimum": 0,
           "default": 60000,
-          "description": "wx.connectSocket 的超时时间，单位：毫秒",
-          "markdownDescription": "`wx.connectSocket` 的超时时间，单位：毫秒",
-          "x-intellij-html-description": "<p><code>wx.connectSocket</code> 的超时时间，单位：毫秒</p>"
+          "description": "wx.connectSocket 的超时时间，单位：毫秒（默认值：60000）",
+          "markdownDescription": "`wx.connectSocket` 的超时时间，单位：毫秒\n\n**默认值**：`60000`",
+          "x-intellij-html-description": "<p><code>wx.connectSocket</code> 的超时时间，单位：毫秒</p><p><b>默认值</b>：<code>60000</code></p>"
         },
         "uploadFile": {
           "type": "integer",
           "minimum": 0,
           "default": 60000,
-          "description": "wx.uploadFile 的超时时间，单位：毫秒",
-          "markdownDescription": "`wx.uploadFile` 的超时时间，单位：毫秒",
-          "x-intellij-html-description": "<p><code>wx.uploadFile</code> 的超时时间，单位：毫秒</p>"
+          "description": "wx.uploadFile 的超时时间，单位：毫秒（默认值：60000）",
+          "markdownDescription": "`wx.uploadFile` 的超时时间，单位：毫秒\n\n**默认值**：`60000`",
+          "x-intellij-html-description": "<p><code>wx.uploadFile</code> 的超时时间，单位：毫秒</p><p><b>默认值</b>：<code>60000</code></p>"
         },
         "downloadFile": {
           "type": "integer",
           "minimum": 0,
           "default": 60000,
-          "description": "wx.downloadFile 的超时时间，单位：毫秒",
-          "markdownDescription": "`wx.downloadFile` 的超时时间，单位：毫秒",
-          "x-intellij-html-description": "<p><code>wx.downloadFile</code> 的超时时间，单位：毫秒</p>"
+          "description": "wx.downloadFile 的超时时间，单位：毫秒（默认值：60000）",
+          "markdownDescription": "`wx.downloadFile` 的超时时间，单位：毫秒\n\n**默认值**：`60000`",
+          "x-intellij-html-description": "<p><code>wx.downloadFile</code> 的超时时间，单位：毫秒</p><p><b>默认值</b>：<code>60000</code></p>"
         }
       }
     },
     "debug": {
       "type": "boolean",
       "default": false,
-      "description": "是否开启 debug 模式",
-      "markdownDescription": "是否开启 `debug` 模式\n\n详见官方文档：[debug](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#debug)",
-      "x-intellij-html-description": "<p>是否开启 <code>debug</code> 模式</p><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#debug\">debug</a></p>"
+      "description": "是否开启 debug 模式（默认值：false）",
+      "markdownDescription": "是否开启 `debug` 模式\n\n详见官方文档：[debug](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#debug)\n\n**默认值**：`false`",
+      "x-intellij-html-description": "<p>是否开启 <code>debug</code> 模式</p><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#debug\">debug</a></p><p><b>默认值</b>：<code>false</code></p>"
     },
     "functionalPages": {
       "type": "boolean",
       "default": false,
-      "description": "是否启用插件功能页",
-      "markdownDescription": "是否启用插件功能页\n\n**支持最低版本**：\n\n- 基础库：2.1.0\n\n详见官方文档：[functionalPages](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#functionalPages)",
-      "x-intellij-html-description": "<p>是否启用插件功能页</p><p><b>支持最低版本</b>：</p><ul><li>基础库：2.1.0</li></ul><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#functionalPages\">functionalPages</a></p>",
+      "description": "是否启用插件功能页（默认值：false）",
+      "markdownDescription": "是否启用插件功能页\n\n**支持最低版本**：\n\n- 基础库：2.1.0\n\n详见官方文档：[functionalPages](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#functionalPages)\n\n**默认值**：`false`",
+      "x-intellij-html-description": "<p>是否启用插件功能页</p><p><b>支持最低版本</b>：</p><ul><li>基础库：2.1.0</li></ul><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#functionalPages\">functionalPages</a></p><p><b>默认值</b>：<code>false</code></p>",
       "x-wechat-min-version": "2.1.0"
     },
     "subpackages": {
@@ -425,9 +425,9 @@
             "enum": ["all", "wifi"],
             "default": "wifi",
             "markdownEnumDescriptions": ["不限网络", "仅 wifi 下预下载"],
-            "description": "在指定网络下预下载",
-            "markdownDescription": "在指定网络下预下载\n\n- `all`：不限网络\n- `wifi`：仅 wifi 下预下载（默认值）",
-            "x-intellij-html-description": "<p>在指定网络下预下载</p><ul><li><code>all</code>：不限网络</li><li><code>wifi</code>：仅 wifi 下预下载（默认值）</li></ul>"
+            "description": "在指定网络下预下载（默认值：wifi）",
+            "markdownDescription": "在指定网络下预下载\n\n- `all`：不限网络\n- `wifi`：仅 wifi 下预下载（默认值）\n\n**默认值**：`wifi`",
+            "x-intellij-html-description": "<p>在指定网络下预下载</p><ul><li><code>all</code>：不限网络</li><li><code>wifi</code>：仅 wifi 下预下载（默认值）</li></ul><p><b>默认值</b>：<code>wifi</code></p>"
           },
           "packages": {
             "type": "array",
@@ -444,9 +444,9 @@
     "resizable": {
       "type": "boolean",
       "default": false,
-      "description": "PC 小程序是否支持用户改变窗口大小，iPad 小程序是否支持旋转",
-      "markdownDescription": "PC 小程序是否支持用户改变窗口大小，iPad 小程序是否支持旋转\n\n**支持最低版本**：\n\n- 基础库：2.3.0\n\n详见官方文档：[resizable](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#resizable)",
-      "x-intellij-html-description": "<p>PC 小程序是否支持用户改变窗口大小，iPad 小程序是否支持旋转</p><p><b>支持最低版本</b>：</p><ul><li>基础库：2.3.0</li></ul><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#resizable\">resizable</a></p>",
+      "description": "PC 小程序是否支持用户改变窗口大小，iPad 小程序是否支持旋转（默认值：false）",
+      "markdownDescription": "PC 小程序是否支持用户改变窗口大小，iPad 小程序是否支持旋转\n\n**支持最低版本**：\n\n- 基础库：2.3.0\n\n详见官方文档：[resizable](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#resizable)\n\n**默认值**：`false`",
+      "x-intellij-html-description": "<p>PC 小程序是否支持用户改变窗口大小，iPad 小程序是否支持旋转</p><p><b>支持最低版本</b>：</p><ul><li>基础库：2.3.0</li></ul><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#resizable\">resizable</a></p><p><b>默认值</b>：<code>false</code></p>",
       "x-wechat-min-version": "2.3.0"
     },
     "usingComponents": {
@@ -613,9 +613,9 @@
         "enableFPSPanel": {
           "type": "boolean",
           "default": false,
-          "description": "是否启用 FPS 面板",
-          "markdownDescription": "是否启用 `FPS` 面板",
-          "x-intellij-html-description": "<p>是否启用 <code>FPS</code> 面板</p>"
+          "description": "是否启用 FPS 面板（默认值：false）",
+          "markdownDescription": "是否启用 `FPS` 面板\n\n**默认值**：`false`",
+          "x-intellij-html-description": "<p>是否启用 <code>FPS</code> 面板</p><p><b>默认值</b>：<code>false</code></p>"
         }
       }
     },
@@ -635,23 +635,23 @@
             "touchstart": {
               "type": "boolean",
               "default": false,
-              "description": "是否设置 touchstart 事件为 passive",
-              "markdownDescription": "是否设置 `touchstart` 事件为 `passive`",
-              "x-intellij-html-description": "<p>是否设置 <code>touchstart</code> 事件为 <code>passive</code></p>"
+              "description": "是否设置 touchstart 事件为 passive（默认值：false）",
+              "markdownDescription": "是否设置 `touchstart` 事件为 `passive`\n\n**默认值**：`false`",
+              "x-intellij-html-description": "<p>是否设置 <code>touchstart</code> 事件为 <code>passive</code></p><p><b>默认值</b>：<code>false</code></p>"
             },
             "touchmove": {
               "type": "boolean",
               "default": false,
-              "description": "是否设置 touchmove 事件为 passive",
-              "markdownDescription": "是否设置 `touchmove` 事件为 `passive`",
-              "x-intellij-html-description": "<p>是否设置 <code>touchmove</code> 事件为 <code>passive</code></p>"
+              "description": "是否设置 touchmove 事件为 passive（默认值：false）",
+              "markdownDescription": "是否设置 `touchmove` 事件为 `passive`\n\n**默认值**：`false`",
+              "x-intellij-html-description": "<p>是否设置 <code>touchmove</code> 事件为 <code>passive</code></p><p><b>默认值</b>：<code>false</code></p>"
             },
             "wheel": {
               "type": "boolean",
               "default": false,
-              "description": "是否设置 wheel 事件为 passive",
-              "markdownDescription": "是否设置 `wheel` 事件为 `passive`",
-              "x-intellij-html-description": "<p>是否设置 <code>wheel</code> 事件为 <code>passive</code></p>"
+              "description": "是否设置 wheel 事件为 passive（默认值：false）",
+              "markdownDescription": "是否设置 `wheel` 事件为 `passive`\n\n**默认值**：`false`",
+              "x-intellij-html-description": "<p>是否设置 <code>wheel</code> 事件为 <code>passive</code></p><p><b>默认值</b>：<code>false</code></p>"
             }
           }
         }
@@ -675,9 +675,9 @@
       "type": "string",
       "enum": ["webview", "skyline"],
       "default": "webview",
-      "description": "全局默认渲染后端",
-      "markdownDescription": "全局默认渲染后端\n\n详见官方文档：[renderer](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#renderer)",
-      "x-intellij-html-description": "<p>全局默认渲染后端</p><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#renderer\">renderer</a></p>"
+      "description": "全局默认渲染后端（默认值：webview）",
+      "markdownDescription": "全局默认渲染后端\n\n详见官方文档：[renderer](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#renderer)\n\n**默认值**：`webview`",
+      "x-intellij-html-description": "<p>全局默认渲染后端</p><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#renderer\">renderer</a></p><p><b>默认值</b>：<code>webview</code></p>"
     },
     "rendererOptions": {
       "type": "object",
@@ -696,37 +696,37 @@
             "defaultDisplayBlock": {
               "type": "boolean",
               "default": false,
-              "description": "开启默认 Block 布局",
-              "markdownDescription": "开启默认 `Block` 布局",
-              "x-intellij-html-description": "<p>开启默认 <code>Block</code> 布局</p>"
+              "description": "开启默认 Block 布局（默认值：false）",
+              "markdownDescription": "开启默认 `Block` 布局\n\n**默认值**：`false`",
+              "x-intellij-html-description": "<p>开启默认 <code>Block</code> 布局</p><p><b>默认值</b>：<code>false</code></p>"
             },
             "defaultContentBox": {
               "type": "boolean",
               "default": false,
-              "description": "开启默认 ContentBox 盒模型",
-              "markdownDescription": "开启默认 `ContentBox` 盒模型",
-              "x-intellij-html-description": "<p>开启默认 <code>ContentBox</code> 盒模型</p>"
+              "description": "开启默认 ContentBox 盒模型（默认值：false）",
+              "markdownDescription": "开启默认 `ContentBox` 盒模型\n\n**默认值**：`false`",
+              "x-intellij-html-description": "<p>开启默认 <code>ContentBox</code> 盒模型</p><p><b>默认值</b>：<code>false</code></p>"
             },
             "disableABTest": {
               "type": "boolean",
               "default": false,
-              "description": "关闭 Skyline AB 实验",
-              "markdownDescription": "关闭 `Skyline` AB 实验",
-              "x-intellij-html-description": "<p>关闭 <code>Skyline</code> AB 实验</p>"
+              "description": "关闭 Skyline AB 实验（默认值：false）",
+              "markdownDescription": "关闭 `Skyline` AB 实验\n\n**默认值**：`false`",
+              "x-intellij-html-description": "<p>关闭 <code>Skyline</code> AB 实验</p><p><b>默认值</b>：<code>false</code></p>"
             },
             "enableScrollViewAutoSize": {
               "type": "boolean",
               "default": false,
-              "description": "开启 scroll-view 自动撑开",
-              "markdownDescription": "开启 `scroll-view` 自动撑开",
-              "x-intellij-html-description": "<p>开启 <code>scroll-view</code> 自动撑开</p>"
+              "description": "开启 scroll-view 自动撑开（默认值：false）",
+              "markdownDescription": "开启 `scroll-view` 自动撑开\n\n**默认值**：`false`",
+              "x-intellij-html-description": "<p>开启 <code>scroll-view</code> 自动撑开</p><p><b>默认值</b>：<code>false</code></p>"
             },
             "tagNameStyleIsolation": {
               "type": "string",
               "default": "isolated",
-              "description": "开启 tag 选择器全局匹配",
-              "markdownDescription": "开启 `tag` 选择器全局匹配",
-              "x-intellij-html-description": "<p>开启 <code>tag</code> 选择器全局匹配</p>"
+              "description": "开启 tag 选择器全局匹配（默认值：isolated）",
+              "markdownDescription": "开启 `tag` 选择器全局匹配\n\n**默认值**：`isolated`",
+              "x-intellij-html-description": "<p>开启 <code>tag</code> 选择器全局匹配</p><p><b>默认值</b>：<code>isolated</code></p>"
             }
           }
         }
@@ -736,9 +736,9 @@
       "type": "string",
       "enum": ["exparser", "glass-easel"],
       "default": "exparser",
-      "description": "小程序组件框架",
-      "markdownDescription": "小程序组件框架\n\n详见官方文档：[componentFramework](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#componentFramework)",
-      "x-intellij-html-description": "<p>小程序组件框架</p><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#componentFramework\">componentFramework</a></p>"
+      "description": "小程序组件框架（默认值：exparser）",
+      "markdownDescription": "小程序组件框架\n\n详见官方文档：[componentFramework](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#componentFramework)\n\n**默认值**：`exparser`",
+      "x-intellij-html-description": "<p>小程序组件框架</p><p>详见官方文档：<a href=\"https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#componentFramework\">componentFramework</a></p><p><b>默认值</b>：<code>exparser</code></p>"
     },
     "miniApp": {
       "type": "object",
